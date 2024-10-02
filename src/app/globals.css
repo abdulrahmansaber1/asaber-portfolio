@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.home-h1-intro {
+  background: #c956cf;
+  background: radial-gradient(circle farthest-corner at center center, #c956cf 0%, #4000ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +23,68 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  :root {
+    --background: 271 16% 95%;
+    --foreground: 271 5% 0%;
+    --card: 271 16% 90%;
+    --card-foreground: 271 5% 10%;
+    --popover: 271 16% 95%;
+    --popover-foreground: 271 95% 0%;
+    --primary: 271 97% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 271 16% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 233 16% 85%;
+    --muted-foreground: 271 5% 35%;
+    --accent: 233 16% 80%;
+    --accent-foreground: 271 5% 10%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 271 5% 90%;
+    --border: 271 20% 50%;
+    --input: 271 20% 18%;
+    --ring: 271 97% 25%;
+    --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+  .dark {
+    --background: 271 16% 5%;
+    --foreground: 271 5% 90%;
+    --card: 271 16% 0%;
+    --card-foreground: 271 5% 90%;
+    --popover: 271 16% 5%;
+    --popover-foreground: 271 5% 90%;
+    --primary: 271 97% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 271 16% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 233 16% 15%;
+    --muted-foreground: 271 5% 60%;
+    --accent: 233 16% 15%;
+    --accent-foreground: 271 5% 90%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 271 5% 90%;
+    --border: 271 20% 18%;
+    --input: 271 20% 18%;
+    --ring: 271 97% 25%;
+    --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
