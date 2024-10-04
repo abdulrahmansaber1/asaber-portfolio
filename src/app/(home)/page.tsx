@@ -9,7 +9,6 @@ export default function Home() {
       <HomeIntroSection />
       <HomeSkillsSection />
       <HomeServicesSection />
-      <Footer />
     </div>
   )
 }

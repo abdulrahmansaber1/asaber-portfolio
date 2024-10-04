@@ -3,16 +3,15 @@
 import Link from "next/link"
 import ShinyButton from "@/components/ui/shiny-button"
 
+import translate from "@/lib/translate"
+
 import { LanguageContext } from "@/providers/language"
 import { ThemeSwitcher } from "../theme-switcher"
 import { LanguageSwitcher } from "../language-switcher"
 import { Logo } from "../logo"
-import { Home } from "lucide-react"
+import { NavbarItem } from "./item"
 
 import { useContext } from "react"
-
-import translate from "@/lib/translate"
-import { NavbarItem } from "./item"
 import { navbarURLs } from "./data"
 
 export const Navbar = () => {
@@ -23,7 +22,7 @@ export const Navbar = () => {
       <section className="flex items-center gap-8">
         <ul className="flex items-center gap-1">
           {navbarURLs.map((item, index) => (
-            <NavbarItem key={`nav-item-${index}`} {...item} />
+            <NavbarItem key={`nav-item-${index}-${item.label}`} {...item} />
           ))}
         </ul>
       </section>
@@ -33,7 +32,9 @@ export const Navbar = () => {
         <LanguageSwitcher />
         <ThemeSwitcher />
         <Link href="">
-          <ShinyButton className="bg-indigo-900 rounded-md font-semibold capitalize text-white">{translate("workTogetherButton", language)}</ShinyButton>
+          <ShinyButton className="bg-indigo-900 rounded-md font-semibold capitalize text-white">
+            {translate("workTogetherButton", language)}
+          </ShinyButton>
         </Link>
       </section>
     </div>

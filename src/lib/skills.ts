@@ -10,7 +10,7 @@ export const skills = [
   },
   {
     label: "Next.js",
-    logo: "/skills/nextjs.svg",
+    logo: "/skills/nextjs-icon.svg",
   },
   {
     label: "Tailwind CSS",
@@ -22,7 +22,7 @@ export const skills = [
   },
   {
     label: "Node.js",
-    logo: "/skills/nodejs.svg",
+    logo: "/skills/nodejs-icon.svg",
   },
   {
     label: "Nest.js",
@@ -34,7 +34,7 @@ export const skills = [
   },
   {
     label: "Laravel",
-    logo: "/skills/laravel.svg",
+    logo: "/skills/laravel-2.svg",
   },
   {
     label: "MySQL",

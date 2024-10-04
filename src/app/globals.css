@@ -9,6 +9,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.project-container,
+.force-dir {
+  direction: ltr !important;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

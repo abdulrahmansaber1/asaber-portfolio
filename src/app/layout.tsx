@@ -1,6 +1,6 @@
 import "./globals.css"
 
-import { metadata as defaultMetadata, languageCookie, rubikFont, nunitoFont, interFont, cn } from "@/lib"
+import { metadata as defaultMetadata, languageCookie, rubikFont, nunitoFont, cairoFont, interFont, cn } from "@/lib"
 import { cookies } from "next/headers"
 
 import { LanguageProvider } from "@/providers/language"
@@ -10,6 +10,8 @@ import { ThemeProvider } from "@/providers/theme"
 import { Navbar } from "@/components/navbar"
 import { SocialSidebar } from "@/components/social-sidebar"
 import { Background } from "@/components/background"
+import { Analytics } from "@vercel/analytics/react"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = defaultMetadata
 
@@ -27,8 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main className="max-w-screen-2xl xl:p-0 p-8 mx-auto z-10">
               {children}
+              <Toaster />
               <Background />
               <SocialSidebar />
+              <Analytics />
             </main>
           </LanguageProvider>
         </ThemeProvider>

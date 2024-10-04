@@ -1,4 +1,4 @@
-import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 
 export const logo = {
   main: "/logo/logo.png",
@@ -7,7 +7,7 @@ export const logo = {
 
 export const contact = {
   email: "abdulrahmansaber120@gmail.com",
-  phone: "+201123525123",
+  phone: "+20 1123 5251 23",
   whatsapp: "https://wa.me/+201123525123",
   telegram: "https://t.me/asaber3030",
   me: "/me.jpg",
@@ -16,6 +16,7 @@ export const contact = {
 export const links = {
   github: "https://github.com/asaber3030",
   linkedin: "https://www.linkedin.com/in/abdulrahman-saber/",
+  awsCertificate: "https://www.credly.com/badges/5a83bedf-27b7-4ea1-b734-17fbc33c72ef/linked_in_profile",
 }
 
 export const metadata = {
@@ -30,3 +31,11 @@ export const socialMedia = [
 ]
 
 export const languageCookie = "asaber-language"
+
+export const projectsTabs = [
+  { name: "all", href: "/projects" },
+  { name: "frontEnd", href: "/projects/front-end" },
+  { name: "backEnd", href: "/projects/back-end" },
+  { name: "ai", href: "/projects/ai" },
+  { name: "others", href: "/projects/others" },
+]

@@ -5,6 +5,6 @@ export const navbarURLs = [
   { href: routes.home, icon: Home },
   { href: routes.about, label: "about" },
   { href: routes.projects, label: "projects" },
-  { href: routes.experience, label: "experience" },
+  { href: routes.workTogether, label: "contact" },
   { href: routes.cv, label: "cv" },
 ]

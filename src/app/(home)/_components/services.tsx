@@ -3,58 +3,47 @@
 import translate from "@/lib/translate"
 
 import React, { useContext } from "react"
-import Marquee from "@/components/ui/marquee"
 
 import { LanguageContext } from "@/providers/language"
 import { homePage } from "./data"
 
+import { motion } from "framer-motion"
+
 export const HomeServicesSection = () => {
   const language = useContext(LanguageContext)
+  const variants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+  }
+
   return (
     <div>
-      <section>
+      <section className="mb-4">
         <h2 className="text-3xl font-semibold">{translate("myServices", language)}</h2>
       </section>
 
-      <section className="mt-4">
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          {language === "en" && (
-            <React.Fragment>
-              <Marquee className="[--duration:10s]" repeat={3}>
-                {homePage.servicesEN.slice(0, 4).map((item, idx) => (
-                  <div className="text-xl" key={`en-${idx}`}>
-                    {item}
-                  </div>
-                ))}
-              </Marquee>
-              <Marquee className="[--duration:10s]" repeat={3} reverse>
-                {homePage.servicesEN.slice(4, 8).map((item, idx) => (
-                  <div className="text-xl" key={`en-rev-${idx}`}>
-                    {item}
-                  </div>
-                ))}
-              </Marquee>
-            </React.Fragment>
-          )}
-          {language === "ar" && (
-            <React.Fragment>
-              <Marquee className="[--duration:10s]" repeat={3} reverse>
-                {homePage.servicesAR.slice(0, 4).map((item, idx) => (
-                  <div className="text-xl" key={`ar-rev-${idx}`}>
-                    {item}
-                  </div>
-                ))}
-              </Marquee>
-              <Marquee className="[--duration:10s]" repeat={3}>
-                {homePage.servicesAR.slice(0, 4).map((item, idx) => (
-                  <div className="text-xl" key={`ar-${idx}`}>
-                    {item}
-                  </div>
-                ))}
-              </Marquee>
-            </React.Fragment>
-          )}
-        </div>
+      <section className="grid grid-cols-1 xl:grid-cols-3 gap-4">
+        {homePage.services.map((service, index) => (
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={variants}
+            key={`service-${index}`}
+            className="border rounded-md p-4 dark:border-[#222] border-gray-300 flex flex-col justify-between dark:shadow-2xl shadow-sm"
+          >
+            <section>
+              <p className="text-lg font-extrabold text-gray-500 p-2 rounded-md dark:bg-[#111] bg-white dark:shadow-xl w-fit mb-2 shadow-sm">
+                0{index + 1}
+              </p>
+              <p className="uppercase text-2xl font-bold">
+                {language === "ar" ? service.arTitle : service.enTitle}
+              </p>
+            </section>
+            <p className="text-gray-500">
+              {language === "ar" ? service.arDescription : service.enDescription}
+            </p>
+          </motion.div>
+        ))}
       </section>
     </div>
   )
