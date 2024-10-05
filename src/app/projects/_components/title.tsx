@@ -13,5 +13,10 @@ type Props = {
 
 export const ProjectPageTitle = ({ title }: Props) => {
   const language = useContext(LanguageContext)
-  return <WordPullUp className="xl:text-5xl md:text-4xl text-4xl font-extrabold mb-6" words={translate(title, language)} />
+  return (
+    <WordPullUp
+      className="xl:text-5xl md:text-4xl text-3xl font-extrabold mb-6"
+      words={translate(title, language)}
+    />
+  )
 }

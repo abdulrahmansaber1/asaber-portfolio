@@ -25,16 +25,16 @@ export const ProjectTabs = () => {
     <div className="flex gap-2 h-fit">
       {projectsTabs.map((tab, index) => (
         <motion.div
+          transition={{ duration: 0.5, delay: 0.1 * index }}
           key={tab.name + index}
           variants={variants}
           initial="initial"
           animate="animate"
-          transition={{ duration: 0.5, delay: 0.1 * index }}
         >
           <Link
             href={tab.href}
             className={cn(
-              "rounded-md px-8 p-2 font-bold shadow-sm dark:shadow-lg transition-colors flex items-center gap-2 text-sm dark:bg-transparent dark:text-white bg-white text-black",
+              "rounded-md px-8 p-2 font-bold shadow-sm dark:shadow-lg transition-colors flex items-center gap-2 dark:bg-transparent dark:text-white bg-white text-black text-xs xl:text-sm md:text-sm",
               tab.href === pathname && "bg-indigo-900 text-white dark:bg-indigo-900"
             )}
           >

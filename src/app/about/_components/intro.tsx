@@ -12,7 +12,10 @@ export const AboutIntroSection = () => {
 
   return (
     <section>
-      <WordPullUp className="xl:text-6xl md:text-4xl text-4xl font-extrabold mb-6" words={translate("aboutMe", language)} />
+      <WordPullUp
+        className="xl:text-6xl md:text-4xl text-4xl font-extrabold mb-6"
+        words={translate("aboutMe", language)}
+      />
       <p className="leading-6 text-sm">{translate("aboutMeDescription", language)}</p>
     </section>
   )

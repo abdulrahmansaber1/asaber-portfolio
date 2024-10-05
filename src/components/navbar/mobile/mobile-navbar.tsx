@@ -28,15 +28,16 @@ export const MobileNavbar = () => {
   return (
     <div
       className={cn(
-        "flex items-center justify-between p-8 py-3 ",
-        "z-50 flex border-b bg-white dark:bg-transparent border-gray-200 dark:border-gray-600/30 bg-background/20 rounded-md mx-auto shadow-md xl:shadow-none md:shadow-none"
+        "flex items-center justify-between p-8 py-3",
+        "z-50 flex border-b bg-white dark:bg-transparent border-gray-200 dark:border-gray-600/30 bg-background/20 rounded-md mx-auto shadow-md xl:shadow-none md:shadow-none",
+        "xl:hidden md:hidden lg:hidden flex"
       )}
     >
       <Logo />
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <ShinyButton className="px-2 border dark:border-gray-600/30">
-            <Menu className="size-4" />
+          <ShinyButton className="px-2 border dark:border-gray-600/30 text-black dark:text-white">
+            <Menu className="size-4 text-black dark:text-white" />
           </ShinyButton>
         </SheetTrigger>
         <SheetContent>

@@ -4,6 +4,8 @@ import { Metadata } from "next"
 import { PageHeader } from "./_components/page-header"
 import { ProjectContainer } from "./_components/project-container"
 import { allProjects } from "./_components/data"
+import { ProjectContainerSkeleton } from "./_components/skeletons/project-container"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - Projects",

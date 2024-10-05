@@ -27,11 +27,9 @@ export const AboutLastAchievement = () => {
           className="rounded-sm h-fit hidden xl:block"
         />
         <section className="w-full">
-          <p className="text-sm dark:text-gray-400 flex items-center justify-between w-full">
-            <span className="line-clamp-1">
-              AWS Academy Graduate - AWS Academy Cloud Foundations
-            </span>
-            <span className="italic line-clamp-1 dark:text-gray-300 text-gray-500 p-1 px-3 font-semibold rounded-md bg-accent text-xs">
+          <p className="text-sm flex items-center justify-between w-full gap-2">
+            <span>AWS Academy Graduate - AWS Academy Cloud Foundations</span>
+            <span className="italic dark:text-gray-300 text-gray-500 p-1 px-3 font-semibold rounded-md bg-accent text-xs">
               {translate("issuedAt", language)} {translate("issudeDate", language)}
             </span>
           </p>

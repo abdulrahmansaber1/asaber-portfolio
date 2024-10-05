@@ -19,7 +19,7 @@ export const AboutSkillsSection = () => {
       <h2 className="text-2xl dark:text-gray-400 font-bold mb-2 after:content-none after:h-2 after:rounded-md after:bg-primary after:w-10 relative after:">
         {translate("skills", language)}
       </h2>
-      <section className="flex flex-wrap mx-auto gap-1 max-w-screen-lg">
+      <section className="grid grid-cols-2 xl:grid-cols-6 md:grid-cols-4 gap-1 max-w-screen-lg">
         {skills.map((skill, index) => (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export const AboutSkillsSection = () => {
             className="relative"
             key={`skull-about-${index}`}
           >
-            <ShimmerButton className="shadow-2xl flex gap-2 py-1 items-center">
+            <ShimmerButton className="shadow-2xl flex gap-2 py-2 items-center w-full justify-start  ">
               <Image
                 className={cn(skill.label === "Next.js" && "invert", "size-4")}
                 src={skill.logo}
@@ -36,7 +36,7 @@ export const AboutSkillsSection = () => {
                 width={20}
                 height={20}
               />
-              <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-gray-300 lg:text-lg">
+              <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-gray-300 lg:text-lg text-lg">
                 {skill.label}
               </span>
             </ShimmerButton>

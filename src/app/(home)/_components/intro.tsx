@@ -18,19 +18,19 @@ export const HomeIntroSection = () => {
 
   return (
     <section className="my-8 space-y-6 mt-8 grid xl:grid-cols-6 md:grid-cols-6 grid-cols-1 items-center gap-4">
-      <section className="xl:col-span-4 md:col-span-4 col-span-6 w-full space-y-8">
-        <section className="space-y-2">
+      <section className="xl:col-span-4 md:col-span-4 lg:col-span-6 col-span-6 w-full space-y-8">
+        <section className="space-y-2 xl:text-left lg:text-left md:text-left text-center w-full">
           <h1 className="xl:text-6xl md:text-4xl text-3xl font-bold mb-10">
             {translate("helloIntro", language)}{" "}
             <span className="home-h1-intro">{translate("homeIntroTitle", language)}</span>
           </h1>
           <p
-            className="xl:text-xl md:text-xl text-sm dark:text-gray-300 font-normal xl:max-w-[70%] md:max-w-[70%]"
+            className="xl:text-xl md:text-xl text-sm dark:text-gray-300 font-normal xl:max-w-[70%] md:max-w-[70%] w-full lg:w-full"
             dangerouslySetInnerHTML={{ __html: translate("homeIntroDescription", language) }}
           />
         </section>
 
-        <section className="flex gap-6">
+        <section className="flex gap-6 justify-center xl:justify-start md:justify-start">
           {homePage.introLinks.map(({ href, icon: Icon, title }, index) => (
             <a
               href={href}
@@ -43,7 +43,7 @@ export const HomeIntroSection = () => {
           ))}
         </section>
 
-        <section className="flex gap-2">
+        <section className="flex gap-2 justify-center xl:justify-start md:justify-start">
           <LinkBtn href={routes.about}>
             {translate("aboutMe", language)}
             {language === "en" ? (
@@ -60,7 +60,7 @@ export const HomeIntroSection = () => {
 
       <section className="xl:col-span-2 col-span-6 mx-auto">
         {/* <Safari url={homePage.lastProject.url} className="size-md hidden xl:block md:block lg:block mx-auto" src={homePage.lastProject.pcPicture} /> */}
-        <Iphone15Pro src={homePage.lastProject.mobilePicture} />
+        <Iphone15Pro className="max-w-full" src={homePage.lastProject.mobilePicture} />
       </section>
     </section>
   )

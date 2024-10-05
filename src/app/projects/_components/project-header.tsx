@@ -39,7 +39,7 @@ export const ProjectHeader = ({ project, image, index }: Props) => {
           </AspectRatio>
         </motion.div>
       </SheetTrigger>
-      <SheetContent className="min-w-[450px]">
+      <SheetContent className="xl:min-w-[450px] min-w-[90%]">
         <SheetHeader className="mb-4">
           <SheetTitle>{project.title}</SheetTitle>
         </SheetHeader>

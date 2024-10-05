@@ -6,6 +6,7 @@ import { Metadata } from "next"
 import { ContactHeader } from "./_components/contact-header"
 
 import ShineBorder from "@/components/ui/shine-border"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - Contact",

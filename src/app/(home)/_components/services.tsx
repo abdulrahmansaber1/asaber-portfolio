@@ -32,7 +32,7 @@ export const HomeServicesSection = () => {
             className="border rounded-md p-4 dark:border-[#222] border-gray-300 flex flex-col justify-between dark:shadow-2xl shadow-sm"
           >
             <section>
-              <p className="text-lg font-extrabold text-gray-500 p-2 rounded-md dark:bg-[#111] bg-white dark:shadow-xl w-fit mb-2 shadow-sm">
+              <p className="text-lg font-extrabold text-white p-2 rounded-md bg-primary dark:shadow-xl w-fit mb-2 shadow-sm">
                 0{index + 1}
               </p>
               <p className="uppercase text-2xl font-bold">

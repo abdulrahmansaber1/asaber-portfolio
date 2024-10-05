@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib"
 import { usePathname } from "next/navigation"
-import { useContext } from "react"
+import React, { useContext } from "react"
 
 import { LucideIcon } from "lucide-react"
 import { LanguageContext } from "@/providers/language"
@@ -32,8 +32,11 @@ export const NavbarItem = ({ href, icon: Icon, label }: Props) => {
           : "text-gray-600 dark:text-gray-300"
       )}
     >
-      {Icon && <Icon className="size-5" />}
-      {label && translate(label, language)}
+      {label == "home" ? (
+        <React.Fragment>{Icon && <Icon className="size-5" />}</React.Fragment>
+      ) : (
+        <React.Fragment>{label && translate(label, language)}</React.Fragment>
+      )}
     </Link>
   )
 }

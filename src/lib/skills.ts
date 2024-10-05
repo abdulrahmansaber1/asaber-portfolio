@@ -13,7 +13,7 @@ export const skills = [
     logo: "/skills/nextjs-icon.svg",
   },
   {
-    label: "Tailwind CSS",
+    label: "Tailwind",
     logo: "/skills/tailwindcss.svg",
   },
   {
@@ -56,7 +56,7 @@ export const groupedSkills = [
         logo: "/skills/redux.svg",
       },
       {
-        label: "Tailwind CSS",
+        label: "Tailwind",
         logo: "/skills/tailwindcss.svg",
       },
       {
@@ -108,7 +108,7 @@ export const groupedSkills = [
       },
       { label: "Matplotlib", logo: "/skills/matplotlib.svg" },
       {
-        label: "Scikit-learn",
+        label: "Sklearn",
         logo: "/skills/scikit.png",
       },
     ],

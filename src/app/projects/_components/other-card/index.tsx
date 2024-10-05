@@ -27,7 +27,7 @@ export const OtherProjectContainer = ({ index, type, project }: Props) => {
     >
       <h2 className="font-bold text-xl mb-1">{project.title}</h2>
       <p className="text-gray-400 text-sm xl:text-lg md:text-lg mb-4">{project.description}</p>
-      <section className="flex gap-2 justify-between flex-row-reverse">
+      <section className="flex gap-2 justify-between flex-row-reverse items-end">
         <ul className="flex gap-1 flex-wrap items-center justify-end">
           {project.tools.map((tool, index) => (
             <li
@@ -41,7 +41,7 @@ export const OtherProjectContainer = ({ index, type, project }: Props) => {
         <a
           href={project.github}
           target="_blank"
-          className="border border-gray-200 dark:border-[#333] p-1 px-2 rounded-md font-semibold transition-colors dark:bg-transparent bg-gray-300 dark:text-gray-300 text-black hover:text-white hover:bg-[#333] dark:hover:bg-[#333]"
+          className="border h-fit border-gray-200 dark:border-[#333] p-1 px-2 rounded-md font-semibold transition-colors dark:bg-transparent bg-gray-300 dark:text-gray-300 text-black hover:text-white hover:bg-[#333] dark:hover:bg-[#333]"
         >
           <GitHubLogoIcon />
         </a>
