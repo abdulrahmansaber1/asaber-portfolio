@@ -45,7 +45,10 @@ export const MobileNavbar = () => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader className="mb-4">
-            <SheetTitle className="dark:text-white flex gap-4 items-center justify-center">
+            <SheetTitle
+              onClick={handleClose}
+              className="dark:text-white flex gap-4 items-center justify-center"
+            >
               <Logo />
             </SheetTitle>
           </SheetHeader>
@@ -56,10 +59,10 @@ export const MobileNavbar = () => {
                 <Link
                   href={href}
                   className={cn(
-                    "flex gap-4 items-center px-4 py-2 rounded-md dark:hover:bg-[#222] transition-colors",
+                    "flex gap-4 items-center px-4 py-1.5 rounded-md dark:hover:bg-[#222] transition-colors text-sm",
                     pathname === href
-                      ? "bg-primary text-white dark:hover:bg-primary"
-                      : "text-black dark:text-white hover:bg-primary hover:text-white"
+                      ? "bg-[#222] text-white dark:hover:bg-[#222]"
+                      : "text-black dark:text-white hover:bg-[#222] hover:text-white"
                   )}
                 >
                   {Icon && <Icon className="size-4 inline-block mr-2" />}
@@ -69,18 +72,18 @@ export const MobileNavbar = () => {
             ))}
           </ul>
 
-          <Separator className="bg-[#222] mt-4" />
+          <Separator className="dark:bg-[#222] mt-4 bg-gray-300" />
 
-          <section className="flex flex-col gap-2 mt-4">
+          <section className="flex flex-col gap-1 mt-4">
             <LanguageSwitcher
               label={translate("switchLanguage", language)}
-              className="w-full justify-start text-sm bg-[#222] hover:bg-[#333]"
+              className="w-full justify-start text-sm bg-primary hover:bg-primary/90 text-white"
               size="sm"
               variant="default"
             />
             <ThemeSwitcher
               label={translate("switchTheme", language)}
-              className="w-full justify-start text-sm bg-[#222] hover:bg-[#333]"
+              className="w-full justify-start text-sm bg-[#222] hover:bg-[#333] text-white hover:text-white"
               size="sm"
               variant="ghost"
             />

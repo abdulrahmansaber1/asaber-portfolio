@@ -37,7 +37,7 @@ export function LanguageSwitcher({ label, className, size = "icon", variant = "g
       <DropdownMenuTrigger asChild>
         <Button
           size={size}
-          className={cn("border-none transition-all uppercase flex gap-4", className)}
+          className={cn("border-none transition-all flex gap-4", className)}
           variant={variant}
         >
           {!label && language}
