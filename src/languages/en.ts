@@ -33,6 +33,9 @@ export const EnglishTranslations: Record<string, string> = {
   skills: "Skills",
   moreAboutMe: "More About Me",
 
+  switchLanguage: "Switch Language",
+  switchTheme: "Switch Theme",
+
   myServices: "My Services",
 
   aboutMe: "About Me",

@@ -11,6 +11,9 @@ export const ArabicTranslations: Record<string, string> = {
   workTogetherButton: "اتواصل معايا!",
   contact: "للتواصل",
 
+  switchLanguage: "تغيير اللغة",
+  switchTheme: "تغيير الثيم",
+
   contactPageTitle: "دعنا نتحدث. <br /> أخبرني عن مشروعك.",
   contactPageSecondaryTitle: "سأعود إليك في أقرب وقت ممكن.",
   message: "رسالة",

@@ -5,7 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function ProjectsLoading() {
   return (
-    <>
+    <div className="mt-8">
       <div className="flex space-y-4 xl:flex-row md:flex-row flex-col xl:justify-between md:justify-between justify-center items-center mb-4">
         <Skeleton className="h-8 w-[50%] bg-gray-300" />
         <div className="flex gap-2">
@@ -21,6 +21,6 @@ export default function ProjectsLoading() {
           <ProjectContainerSkeleton key={`project-skeleton-${index}`} />
         ))}
       </section>
-    </>
+    </div>
   )
 }

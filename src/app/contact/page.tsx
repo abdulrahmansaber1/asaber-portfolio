@@ -19,7 +19,7 @@ export default function ContactPage() {
     <div className="grid xl:grid-cols-6 items-center gap-20 xl:py-16 md:py-16 py-8">
       <ContactHeader />
       <ShineBorder
-        className="col-span-3 w-full relative space-y-6 p-8 rounded-md dark:bg-[#101010] bg-white dark:shadow-xl shadow-md"
+        className="col-span-3 w-full relative space-y-6 xl:p-8 p-4 rounded-md dark:bg-[#101010] bg-white dark:shadow-xl shadow-md"
         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
       >
         <ContactRightSectionHeader />

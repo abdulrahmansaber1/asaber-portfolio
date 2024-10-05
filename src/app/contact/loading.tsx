@@ -9,12 +9,12 @@ export default function AboutLoading() {
         <div className="space-y-2">
           <Skeleton className="w-18 h-6" />
           <Skeleton className="w-32 h-6" />
-          <Skeleton className="w-72 h-6" />
+          <Skeleton className="w-36 h-6" />
         </div>
         <section className="space-y-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1">
           <div className="flex gap-2 items-center">
             <Skeleton className="size-7" />
-            <Skeleton className="h-7 w-72" />
+            <Skeleton className="h-7 w-36" />
           </div>
           <div className="flex gap-2 items-center">
             <Skeleton className="size-7" />
