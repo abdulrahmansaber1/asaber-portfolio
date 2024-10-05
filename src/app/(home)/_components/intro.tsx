@@ -18,7 +18,7 @@ export const HomeIntroSection = () => {
 
   return (
     <section className="my-8 space-y-6 mt-8 grid xl:grid-cols-6 md:grid-cols-6 grid-cols-1 items-center gap-4">
-      <section className="col-span-4 space-y-8">
+      <section className="xl:col-span-4 md:col-span-4 col-span-6 w-full space-y-8">
         <section className="space-y-2">
           <h1 className="xl:text-6xl md:text-4xl text-3xl font-bold mb-10">
             {translate("helloIntro", language)}{" "}
@@ -58,9 +58,9 @@ export const HomeIntroSection = () => {
         </section>
       </section>
 
-      <section className="col-span-2">
+      <section className="xl:col-span-2 col-span-6 mx-auto">
         {/* <Safari url={homePage.lastProject.url} className="size-md hidden xl:block md:block lg:block mx-auto" src={homePage.lastProject.pcPicture} /> */}
-        <Iphone15Pro className="" src={homePage.lastProject.mobilePicture} />
+        <Iphone15Pro src={homePage.lastProject.mobilePicture} />
       </section>
     </section>
   )

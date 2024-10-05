@@ -8,7 +8,8 @@ import { otherProjects } from "../_components/data"
 
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - Other Projects",
-  description: "A list of projects I've worked on. From front-end to back-end, and everything in between.",
+  description:
+    "A list of projects I've worked on. From front-end to back-end, and everything in between.",
 }
 
 export default function ProjectsPage() {
@@ -17,7 +18,12 @@ export default function ProjectsPage() {
       <PageHeader title="othersProjects" />
       <div className="space-y-2 grid">
         {otherProjects.map((project, index) => (
-          <OtherProjectContainer project={project} index={index} type="other" />
+          <OtherProjectContainer
+            key={`${project.title}-other-${index}`}
+            project={project}
+            index={index}
+            type="other"
+          />
         ))}
       </div>
     </div>

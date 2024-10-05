@@ -16,12 +16,18 @@ export const Footer = ({}: Props) => {
           <p className="mb-4 uppercase font-bold dark:text-gray-500">Contact Me</p>
           <ul className="space-y-4">
             <li>
-              <a className="transition-all dark:hover:text-gray-200 hover:text-gray-500 flex gap-2 items-center" href={`mailto:${contact.email}`}>
+              <a
+                className="transition-all dark:hover:text-gray-200 hover:text-gray-500 flex gap-2 items-center"
+                href={`mailto:${contact.email}`}
+              >
                 <Mail className="size-4" /> {contact.email}
               </a>
             </li>
             <li>
-              <a className="transition-all dark:hover:text-gray-200 hover:text-gray-500 flex gap-2 items-center" href={contact.whatsapp}>
+              <a
+                className="transition-all dark:hover:text-gray-200 hover:text-gray-500 flex gap-2 items-center"
+                href={contact.whatsapp}
+              >
                 <Phone className="size-4" /> {contact.phone}
               </a>
             </li>
@@ -32,7 +38,7 @@ export const Footer = ({}: Props) => {
           <p className="mb-4 uppercase font-bold dark:text-gray-500">Links</p>
           <ul className="flex gap-4">
             {socialMedia.map(({ href, icon: Icon }, index) => (
-              <li key={`s-${index}`}>
+              <li key={`social-li-${index}`}>
                 <a href={href} target="_blank">
                   <Icon className="size-7" />
                 </a>

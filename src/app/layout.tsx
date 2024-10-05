@@ -1,6 +1,6 @@
 import "./globals.css"
 
-import { metadata as defaultMetadata, languageCookie, rubikFont, nunitoFont, cairoFont, interFont, cn } from "@/lib"
+import { metadata as defaultMetadata, languageCookie, rubikFont, interFont } from "@/lib"
 import { cookies } from "next/headers"
 
 import { LanguageProvider } from "@/providers/language"
@@ -12,6 +12,7 @@ import { SocialSidebar } from "@/components/social-sidebar"
 import { Background } from "@/components/background"
 import { Analytics } from "@vercel/analytics/react"
 import { Toaster } from "@/components/ui/toaster"
+import { MobileNavbar } from "@/components/navbar/mobile/mobile-navbar"
 
 export const metadata: Metadata = defaultMetadata
 
@@ -24,9 +25,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={language} dir={direction}>
       <body className={font} style={{ direction }}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true} themes={["light", "dark"]}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+          themes={["light", "dark"]}
+        >
           <LanguageProvider language={language}>
             <Navbar />
+            <MobileNavbar />
             <main className="max-w-screen-2xl xl:p-0 p-8 mx-auto z-10">
               {children}
               <Toaster />
