@@ -16,13 +16,22 @@ export const contact = {
 export const links = {
   github: "https://github.com/asaber3030",
   linkedin: "https://www.linkedin.com/in/abdulrahman-saber/",
-  awsCertificate: "https://www.credly.com/badges/5a83bedf-27b7-4ea1-b734-17fbc33c72ef/linked_in_profile",
+  awsCertificate:
+    "https://www.credly.com/badges/5a83bedf-27b7-4ea1-b734-17fbc33c72ef/linked_in_profile",
 }
 
 export const metadata = {
   title: "Abdulrahman Saber - Portfolio",
-  description: "I'm a software engineer based in Egypt. My passion is to build software that helps people. I'm currently working as a full-stack developer to build web applications.",
-  keywords: ["asaber3030", "asaber", "abdulrahman saber", "abdulrahman-saber", "abdo saber", "saber abdulrahman"],
+  description:
+    "Experienced Full Stack Developer with a demonstrated history of working in the computer software industry. Skilled in TypeScript, Next.js, React, PHP, Laravel, Node.js, Nest.js Express.js, MongoDB, and AWS",
+  keywords: [
+    "asaber3030",
+    "asaber",
+    "abdulrahman saber",
+    "abdulrahman-saber",
+    "abdo saber",
+    "saber abdulrahman",
+  ],
 }
 
 export const socialMedia = [
