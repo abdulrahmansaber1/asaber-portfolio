@@ -79,8 +79,8 @@ export const MobileNavbar = () => {
                     : "text-black dark:text-white hover:bg-[#222] hover:text-white"
                 )}
               >
-                <FileIcon className="size-5" />
-                CV
+                <FileIcon className="size-4" />
+                {translate("cv", language)}
               </a>
             </li>
           </ul>

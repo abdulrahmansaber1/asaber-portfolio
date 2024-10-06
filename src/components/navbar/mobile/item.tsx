@@ -33,7 +33,7 @@ export const MobileNavbarLink = ({ label, icon: Icon, href, handleClose }: Props
             : "text-black dark:text-white hover:bg-[#222] hover:text-white"
         )}
       >
-        {Icon && <Icon className="size-4 inline-block mr-2" />}
+        {Icon && <Icon className="size-4" />}
         {translate(label, language)}
       </Link>
     </li>

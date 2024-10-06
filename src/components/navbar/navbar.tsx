@@ -43,7 +43,7 @@ export const Navbar = () => {
                   : "text-gray-600 dark:text-gray-300"
               )}
             >
-              CV
+              {translate("cv", language)}
             </a>
           </li>
         </ul>

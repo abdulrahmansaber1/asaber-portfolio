@@ -1,6 +1,5 @@
 import { links } from "@/lib"
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
-import { File } from "lucide-react"
 
 export const homePage = {
   title: "Hello, I'm Abdulrahman Saber",
@@ -10,7 +9,7 @@ export const homePage = {
   lastProject: {
     url: "https://ab2a-qalbne.vercel.app/",
     pcPicture: "/home/last-project-lg.png",
-    mobilePicture: "/home/last-project-sm-2.png",
+    mobilePicture: "/home/last-project-sm.png",
   },
 
   introLinks: [

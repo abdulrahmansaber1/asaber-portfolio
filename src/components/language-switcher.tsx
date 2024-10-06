@@ -46,10 +46,20 @@ export function LanguageSwitcher({ label, className, size = "icon", variant = "g
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="border-none w-44 space-y-0.5">
-        <DropdownMenuItem onClick={() => changeLanguage("ar")}>
+        <DropdownMenuItem
+          onClick={() => changeLanguage("ar")}
+          className={cn("flex gap-2 items-center", language === "ar" && "bg-accent justify-end")}
+        >
           {translate("arabic", language)}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("en")}>
+        <DropdownMenuItem
+          className={cn(
+            "flex gap-2 items-center",
+            language === "en" && "bg-accent",
+            language === "ar" && "justify-end"
+          )}
+          onClick={() => changeLanguage("en")}
+        >
           {translate("english", language)}
         </DropdownMenuItem>
       </DropdownMenuContent>
