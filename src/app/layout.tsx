@@ -14,7 +14,12 @@ import { Analytics } from "@vercel/analytics/react"
 import { Toaster } from "@/components/ui/toaster"
 import { MobileNavbar } from "@/components/navbar/mobile/mobile-navbar"
 
-export const metadata: Metadata = defaultMetadata
+export const metadata: Metadata = {
+  ...defaultMetadata,
+  openGraph: {
+    images: ["/logo/logo.png"],
+  },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = cookies()
