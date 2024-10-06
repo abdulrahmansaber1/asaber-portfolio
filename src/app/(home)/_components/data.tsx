@@ -16,7 +16,6 @@ export const homePage = {
   introLinks: [
     { icon: GitHubLogoIcon, title: "GitHub", href: links.github },
     { icon: LinkedInLogoIcon, title: "Linkedin", href: links.linkedin },
-    { icon: File, title: "Resume", href: "/resume.pdf" },
   ],
 
   services: [

@@ -34,7 +34,8 @@ export const MobileNavbar = () => {
         "p-8 py-3",
         "flex items-center justify-between",
         "z-50 border-b bg-white dark:bg-transparent border-gray-200 dark:border-gray-600/30 bg-background/20 rounded-md mx-auto shadow-sm xl:shadow-none md:shadow-none",
-        "xl:hidden md:hidden lg:hidden"
+        "xl:hidden md:hidden lg:hidden",
+        "bg-white"
       )}
     >
       <Logo />

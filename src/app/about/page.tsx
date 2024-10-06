@@ -6,8 +6,6 @@ import { AboutEducationSection } from "./_components/education"
 import { AboutRightSection } from "./_components/right-section"
 import { AboutLastAchievement } from "./_components/last-achievement"
 import { Metadata } from "next/types"
-import { Skeleton } from "@/components/ui/skeleton"
-import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - About",
@@ -17,14 +15,16 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="grid xl:grid-cols-8 grid-cols-1 gap-8 items-center">
+    <section className="grid xl:grid-cols-8 grid-cols-1 items-center justify-center">
       <section className="col-span-5 py-8 space-y-8">
         <AboutIntroSection />
         <AboutSkillsSection />
         <AboutEducationSection />
         <AboutLastAchievement />
       </section>
-      <AboutRightSection />
+      <section className="mx-auto col-span-3 w-full flex justify-center">
+        <AboutRightSection />
+      </section>
     </section>
   )
 }
