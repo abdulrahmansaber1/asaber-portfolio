@@ -6,5 +6,4 @@ export const navbarURLs = [
   { href: routes.about, icon: User, label: "about" },
   { href: routes.projects, icon: Goal, label: "projects" },
   { href: routes.workTogether, icon: Phone, label: "contact" },
-  { href: routes.cv, icon: FileIcon, label: "cv" },
 ]

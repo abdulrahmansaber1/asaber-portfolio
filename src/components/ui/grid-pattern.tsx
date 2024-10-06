@@ -1,6 +1,7 @@
 import { useId } from "react"
 
 import { cn } from "@/lib/utils"
+import { v4 } from "uuid"
 
 interface GridPatternProps {
   width?: any
@@ -45,7 +46,7 @@ export function GridPattern({
           {squares.map(([x, y], index) => (
             <rect
               strokeWidth="0"
-              key={`${x}-${y}`}
+              key={`svg-rect-${x}-${y}-${v4() + (Math.random() * 10000).toFixed(0)}`}
               width={width - 1}
               height={height - 1}
               x={x * width + 1}

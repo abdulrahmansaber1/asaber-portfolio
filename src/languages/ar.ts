@@ -58,6 +58,10 @@ export const ArabicTranslations: Record<string, string> = {
   backEnd: "مشاريع الباك اند",
   frontEnd: "مشاريع الفرو نت اند",
 
+  aiSkills: "مهارات الذكاء الاصطناعي",
+  backEndSkills: "مهارات الباك اند",
+  frontEndSkills: "مهارات الفرونت اند",
+
   othersProjects: "مشاريع أخرى",
   backEndProjects: "مشاريع الباك اند",
   frontEndProjects: "مشاريع الفرونت اند",

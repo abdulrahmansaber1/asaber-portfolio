@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LanguageProvider language={language}>
             <Navbar />
             <MobileNavbar />
-            <main className="xl:max-w-screen-2xl mx-auto z-10 px-6">
+            <main className="xl:max-w-screen-2xl mx-auto z-10 px-6 pb-8">
               {children}
               <Toaster />
               <Background />

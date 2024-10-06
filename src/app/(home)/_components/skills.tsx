@@ -37,7 +37,9 @@ export const HomeSkillsSection = () => {
       <section className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-3 gap-4">
         {groupedSkills.map((group, index) => (
           <section key={`group-${index}`}>
-            <p className="dark:text-gray-500 text-xl font-semibold mb-2">{group.group}</p>
+            <p className="dark:text-gray-500 text-xl font-semibold mb-2">
+              {translate(group.group, language)}
+            </p>
             <div className="grid grid-cols-2 gap-2">
               {group.items.map((skill, index) => (
                 <motion.div

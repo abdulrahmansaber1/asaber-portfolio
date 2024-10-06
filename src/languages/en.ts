@@ -57,6 +57,10 @@ export const EnglishTranslations: Record<string, string> = {
   backEnd: "Back-End",
   frontEnd: "Front-End",
 
+  aiSkills: "AI",
+  backEndSkills: "Back-End",
+  frontEndSkills: "Front-End",
+
   othersProjects: "Other Projects",
   backEndProjects: "Back-End Projects",
   frontEndProjects: "Front-End Projects",

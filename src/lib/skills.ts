@@ -44,7 +44,7 @@ export const skills = [
 
 export const groupedSkills = [
   {
-    group: "Frontend",
+    group: "frontEndSkills",
     items: [
       { label: "TypeScript", logo: "/skills/typescript.svg" },
       {
@@ -66,7 +66,7 @@ export const groupedSkills = [
     ],
   },
   {
-    group: "Backend",
+    group: "backEndSkills",
     items: [
       {
         label: "Next.js",
@@ -100,7 +100,7 @@ export const groupedSkills = [
     ],
   },
   {
-    group: "Machine Learning",
+    group: "aiSkills",
     items: [
       {
         label: "Python",

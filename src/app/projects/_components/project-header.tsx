@@ -70,7 +70,7 @@ export const ProjectHeader = ({ project, image, index }: Props) => {
                 {project.tools.map((item, index) => (
                   <span
                     className="p-1 bg-[#222] rounded-md px-4 text-gray-300"
-                    key={`${item}-${index}`}
+                    key={`span-ski-${item}-${index}`}
                   >
                     {item}
                   </span>

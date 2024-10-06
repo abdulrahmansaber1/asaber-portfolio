@@ -32,7 +32,7 @@ export const OtherProjectContainer = ({ index, type, project }: Props) => {
           {project.tools.map((tool, index) => (
             <li
               className="px-2 py-1 bg-gray-100 dark:bg-[#222] rounded-sm text-xs"
-              key={`${tool}-${index * Math.random()}`}
+              key={`${tool}-${index * Math.random() * 10000}`}
             >
               {tool}
             </li>

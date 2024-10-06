@@ -40,7 +40,7 @@ export function LanguageSwitcher({ label, className, size = "icon", variant = "g
           className={cn("border-none transition-all flex gap-4", className)}
           variant={variant}
         >
-          {!label && language}
+          {!label && <span className="uppercase">{language}</span>}
           {label && <Globe className="size-5" />}
           {label && label}
         </Button>
