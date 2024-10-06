@@ -22,7 +22,7 @@ export const ProjectTabs = () => {
   const language = useContext(LanguageContext)
 
   return (
-    <div className="flex gap-2 h-fit justify-center">
+    <div className="flex gap-2 h-fit justify-center flex-wrap">
       {projectsTabs.map((tab, index) => (
         <motion.div
           transition={{ duration: 0.5, delay: 0.1 * index }}
