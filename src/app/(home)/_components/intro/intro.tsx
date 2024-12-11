@@ -24,7 +24,7 @@ export const HomeIntroSection = () => {
         src={homePage.lastProject.pcPicture}
       />
       <Iphone15Pro
-        className="max-w-full xl:hidden md:hidden lg:hidden block mx-auto"
+        className="max-w-full xl:hidden md:hidden lg:hidden block mx-auto mt-10"
         src={homePage.lastProject.mobilePicture}
       />
     </section>

@@ -69,5 +69,5 @@ export const EnglishTranslations: Record<string, string> = {
   projectName: "Project Name",
   projectDescription: "Project Description",
   projectTools: "Tools",
-  links: "Links",
+  links: "Links"
 }

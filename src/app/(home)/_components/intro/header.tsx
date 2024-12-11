@@ -14,7 +14,7 @@ export const HomeIntroHeaderSection = () => {
         <span className="home-h1-intro">{translate("homeIntroTitle", language)}</span>
       </h1>
       <p
-        className="xl:text-xl md:text-xl text-sm dark:text-gray-300 font-normal xl:max-w-[70%] md:max-w-[70%] w-full mx-auto"
+        className="xl:text-xl md:text-xl text-lg dark:text-gray-300 font-normal xl:max-w-[70%] md:max-w-[70%] w-full mx-auto"
         dangerouslySetInnerHTML={{ __html: translate("homeIntroDescription", language) }}
       />
     </section>
