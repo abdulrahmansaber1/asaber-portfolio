@@ -68,7 +68,7 @@ export const backEndProjects = [
       "A store for selling candles and gifts for special occasions. You can order using the website the website will support online payments soon",
     description:
       "An e-commerce platform for a candle and gift store, designed to simplify the shopping experience for customers celebrating special occasions. The website allows users to browse a curated collection of candles and gifts, place orders, and view product details. While online payments will be supported soon, the platform is fully functional for order placement.",
-    image: "/projects/back-end/candle-store.png",
+    image: "/projects/back-end/candle-store-main.PNG",
     gif: "/projects/back-end/gifs/candle-store.gif",
     tools: ["NextJS", "Prisma", "Redux", "TailwindCss", "MySQL"],
     slug: "candle-store",
@@ -88,7 +88,7 @@ export const backEndProjects = [
       "A system for managing franchises, including operations, resources, and performance tracking.",
     description:
       "iFoe is a comprehensive franchise management system designed to streamline operations across multiple franchise locations. It provides dashboards for individual franchises and central admin control, allowing for efficient resource allocation, performance monitoring, and employee management. The system is tailored to help franchise owners maintain consistency and optimize operations.",
-    image: "/projects/back-end/ifoe.png",
+    image: "/projects/back-end/ifoe-main.PNG",
     tools: ["Laravel", "NextJS", "TailwindCSS"],
     slug: "ifoe-franchise-management-system",
     viewUrl: routes.backendProject("ifoe-franchise-management-system"),
@@ -107,7 +107,7 @@ export const backEndProjects = [
       "A system for handling multiple hospitals with their resources, patients, employees, and medicine.",
     description:
       "This application has the ability to handle large hospitals with multiple resources, patients, employees, and medicine. It has a dashboard for each hospital to manage its resources and employees. Also, it has a dashboard for the admin to manage all hospitals and their resources. You can assign permissions to each employee and manage the medicine and patients.",
-    image: "/projects/back-end/hospital.png",
+    image: "/projects/back-end/hospital-main.PNG",
     gif: "/projects/back-end/gifs/hospital-system.gif",
     tools: ["NextJS", "Prisma", "Redux", "TailwindCss", "MySQL", "Supabase"],
     slug: "hospital-mangament-system",
