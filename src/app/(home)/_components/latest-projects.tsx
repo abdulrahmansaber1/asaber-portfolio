@@ -3,7 +3,7 @@
 import translate from "@/lib/translate"
 
 import { backEndProjects } from "@/app/projects/_components/data"
-import { ProjectContainer } from "@/app/projects/_components/project-container"
+import { ProjectContainer } from "@/app/projects/_components/container"
 import { useLanguage } from "@/hooks/use-language"
 
 export const HomeLatestProjects = () => {

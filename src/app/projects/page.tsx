@@ -2,7 +2,7 @@ import React from "react"
 
 import { Metadata } from "next"
 import { PageHeader } from "./_components/page-header"
-import { ProjectContainer } from "./_components/project-container"
+import { ProjectContainer } from "./_components/container"
 import { allProjects } from "./_components/data"
 
 export const metadata: Metadata = {
