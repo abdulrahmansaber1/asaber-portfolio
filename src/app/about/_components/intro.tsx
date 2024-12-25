@@ -5,10 +5,10 @@ import translate from "@/lib/translate"
 
 import WordPullUp from "@/components/ui/word-pull-up"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 
 export const AboutIntroSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section>

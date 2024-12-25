@@ -1,32 +1,38 @@
 "use client"
 
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
+
+import translate from "@/lib/translate"
+
+import { useLanguage } from "@/hooks/use-language"
+import { motion } from "framer-motion"
+import { routes } from "@/lib"
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { TProject } from "@/types"
 import { GitHubLogoIcon, Link1Icon } from "@radix-ui/react-icons"
-import { useContext } from "react"
-import { LanguageContext } from "@/providers/language"
-import translate from "@/lib/translate"
+import { Dispatch, SetStateAction } from "react"
+import { MoreHorizontal } from "lucide-react"
+import { TProject } from "@/types"
 
 type Props = {
   project: TProject
   image: string
   index: number
+  setSheetOpen: Dispatch<SetStateAction<boolean>>
+  sheetOpen: boolean
 }
 
-export const ProjectHeader = ({ project, image, index }: Props) => {
+export const ProjectHeader = ({ project, image, sheetOpen, setSheetOpen }: Props) => {
   const variants = {
     initial: { scale: 1 },
-    animate: { scale: 0.95 },
+    animate: { scale: 0.95 }
   }
 
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
-    <Sheet>
+    <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
       <SheetTrigger asChild>
         <motion.div
           initial="initial"
@@ -34,15 +40,21 @@ export const ProjectHeader = ({ project, image, index }: Props) => {
           variants={variants}
           className="relative w-full h-[220px] rounded-md overflow-hidden dark:shadow-2xl shadow-sm hover:opacity-90 transition-opacity cursor-pointer"
         >
-          <AspectRatio ratio={354 / 220}>
-            <Image src={image} alt="Project Image" layout="fill" className="object-cover" />
-          </AspectRatio>
+          <Image
+            src={image}
+            alt="Project Image"
+            width={500}
+            height={500}
+            className="shadow-md dark:shadow-2xl rounded-md w-full object-cover"
+          />
         </motion.div>
       </SheetTrigger>
+
       <SheetContent className="xl:min-w-[450px] min-w-[90%]">
         <SheetHeader className="mb-4">
           <SheetTitle>{project.title}</SheetTitle>
         </SheetHeader>
+
         <section className="grid gap-8">
           <section className="max-w-full">
             <Image
@@ -53,6 +65,7 @@ export const ProjectHeader = ({ project, image, index }: Props) => {
               className="rounded-md w-full max-w-full shadow-md dark:shadow-2xl"
             />
           </section>
+
           <section className="space-y-6">
             <div>
               <h3 className="font-semibold text-lg">{translate("projectName", language)}</h3>
@@ -88,9 +101,10 @@ export const ProjectHeader = ({ project, image, index }: Props) => {
                     className="text-blue-500 hover:underline text-sm flex gap-2 items-center"
                   >
                     <GitHubLogoIcon className="size-4" />
-                    Github
+                    {translate("github", language)}
                   </a>
                 )}
+
                 {project.url && (
                   <a
                     href={project.url}
@@ -98,8 +112,18 @@ export const ProjectHeader = ({ project, image, index }: Props) => {
                     className="text-blue-500 hover:underline text-sm flex gap-2 items-center"
                   >
                     <Link1Icon className="size-4" />
-                    Preview
+                    {translate("preview", language)}
                   </a>
+                )}
+
+                {project.slug && (
+                  <Link
+                    href={routes.backendProject(project.slug)}
+                    className="text-blue-500 hover:underline text-sm flex gap-2 items-center"
+                  >
+                    <MoreHorizontal className="size-4" />
+                    {translate("moreDetails", language)}
+                  </Link>
                 )}
               </div>
             </div>

@@ -1,5 +1,4 @@
 import { socialMedia } from "@/lib"
-
 import { v4 } from "uuid"
 
 export const SocialSidebar = () => {

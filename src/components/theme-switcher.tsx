@@ -1,17 +1,16 @@
 "use client"
 
-import * as React from "react"
-import { MoonIcon, SunIcon, FileIcon } from "@radix-ui/react-icons"
 import { useTheme } from "next-themes"
+import { cn } from "@/lib"
 
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 import { Button, ButtonProps } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
-import { cn } from "@/lib"
 
 type Props = ButtonProps & {
   label?: string

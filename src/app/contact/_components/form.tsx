@@ -11,12 +11,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { ContactFormSchema, cn } from "@/lib"
 import { Loader } from "lucide-react"
 
@@ -33,17 +33,17 @@ export const ContactForm = () => {
       name: "",
       subject: "",
       email: "",
-      message: "",
-    },
+      message: ""
+    }
   })
   const ref = useRef<HTMLFormElement>(null)
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   const [loading, setLoading] = useState(false)
 
   const variants = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    animate: { opacity: 1, y: 0 }
   }
 
   const onSubmit = () => {
@@ -54,14 +54,14 @@ export const ContactForm = () => {
         () => {
           toast({
             title: "Message sent!",
-            description: "I'll get back to you as soon as possible.",
+            description: "I'll get back to you as soon as possible."
           })
         },
         () => {
           toast({
             title: "Message sent!",
             description: "I'll get back to you as soon as possible.",
-            variant: "destructive",
+            variant: "destructive"
           })
         }
       )

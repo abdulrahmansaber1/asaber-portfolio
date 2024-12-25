@@ -7,17 +7,17 @@ import { cn, groupedSkills, routes } from "@/lib"
 import { motion } from "framer-motion"
 
 import { LinkBtn } from "@/components/button"
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { ChevronsLeft, ChevronsRight } from "lucide-react"
 
 import Image from "next/image"
 
 export const HomeSkillsSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   const variants = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    animate: { opacity: 1, y: 0 }
   }
 
   return (

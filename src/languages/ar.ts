@@ -20,6 +20,18 @@ export const ArabicTranslations: Record<string, string> = {
   contactPagePara1: "هل ترغب في الحصول على رد فوري، أرسل لي",
   whatsapp: "واتساب",
   telegram: "تليجرام",
+  viewDetails: "عرض التفاصيل",
+  technologies: "التقنيات",
+  features: "المميزات",
+  urls: "الروابط",
+  latestProjects: "اخر المشاريع",
+
+  moreDetails: "المزيد من التفاصيل",
+  quickPreview: "نظرة سريعة",
+  preview: "مشاهدة",
+  github: "Github",
+  url: "الرابط",
+  goBack: "العودة",
 
   name: "الاسم",
   subject: "الموضوع",
@@ -70,5 +82,5 @@ export const ArabicTranslations: Record<string, string> = {
   projectName: "اسم المشروع",
   projectDescription: "وصف المشروع",
   projectTools: "الأدوات",
-  links: "الروابط",
+  links: "الروابط"
 }

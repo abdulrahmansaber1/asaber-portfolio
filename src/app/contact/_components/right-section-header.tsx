@@ -3,13 +3,13 @@
 import { contact } from "@/lib"
 import { useContext } from "react"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 
 import translate from "@/lib/translate"
 
 type Props = {}
 export const ContactRightSectionHeader = ({}: Props) => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section className="space-y-2">

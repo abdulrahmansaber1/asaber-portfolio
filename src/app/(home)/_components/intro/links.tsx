@@ -5,11 +5,11 @@ import { useContext } from "react"
 import { homePage } from "../data"
 import { cn } from "@/lib"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { FileIcon } from "lucide-react"
 
 export const HomeIntroLinksSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section className="flex gap-6 justify-center">

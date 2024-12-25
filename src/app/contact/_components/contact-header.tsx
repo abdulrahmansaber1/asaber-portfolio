@@ -2,14 +2,14 @@
 
 import { useContext } from "react"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { ContactLinks } from "./links"
 
 import Image from "next/image"
 import translate from "@/lib/translate"
 
 export const ContactHeader = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section className="space-y-10 col-span-3">

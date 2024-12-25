@@ -1,11 +1,11 @@
 import translate from "@/lib/translate"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 
 import { useContext } from "react"
 
 export const HomeIntroHeaderSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section className="space-y-2 text-center w-full">

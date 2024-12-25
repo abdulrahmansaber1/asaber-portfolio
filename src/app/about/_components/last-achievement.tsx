@@ -1,17 +1,15 @@
 "use client"
 
 import translate from "@/lib/translate"
-
 import Image from "next/image"
 
-import { useContext } from "react"
+import { useLanguage } from "@/hooks/use-language"
 import { links } from "@/lib"
 
-import { LanguageContext } from "@/providers/language"
 import { ChevronsLeft, ChevronsRight } from "lucide-react"
 
 export const AboutLastAchievement = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section>

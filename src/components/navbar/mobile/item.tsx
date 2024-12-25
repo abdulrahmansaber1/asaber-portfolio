@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 import { useContext } from "react"
 import { cn } from "@/lib"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { LucideIcon } from "lucide-react"
 
 type Props = {
@@ -20,7 +20,7 @@ type Props = {
 export const MobileNavbarLink = ({ label, icon: Icon, href, handleClose }: Props) => {
   const pathname = usePathname()
   const isActive = pathname === href
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <li onClick={handleClose}>

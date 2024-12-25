@@ -4,16 +4,16 @@ import translate from "@/lib/translate"
 
 import React, { useContext } from "react"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { homePage } from "./data"
 
 import { motion } from "framer-motion"
 
 export const HomeServicesSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
   const variants = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    animate: { opacity: 1, y: 0 }
   }
 
   return (

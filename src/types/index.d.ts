@@ -11,6 +11,8 @@ export type TProject = {
   tools: string[]
   shortBrief?: string
   gif?: string
+  slug?: string
+  viewUrl?: string
 }
 
 export type TOtherProject = {

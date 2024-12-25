@@ -9,14 +9,14 @@ import { otherProjects } from "../_components/data"
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - Other Projects",
   description:
-    "A list of projects I've worked on. From front-end to back-end, and everything in between.",
+    "A list of projects I've worked on. From front-end to back-end, and everything in between."
 }
 
 export default function ProjectsPage() {
   return (
     <div>
       <PageHeader title="othersProjects" />
-      <div className="space-y-2 grid">
+      <div className="grid xl:grid-cols-2 gap-4">
         {otherProjects.map((project, index) => (
           <OtherProjectContainer
             key={`${project.title}-other-${index}`}

@@ -10,12 +10,12 @@ import { Metadata } from "next/types"
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - About",
   description:
-    "Learn more about Abdulrahman Saber, a Full Stack Web Developer with 9 years of experience. Proficient in various frameworks and languages including Laravel, PHP, React, and NextJS.",
+    "Learn more about Abdulrahman Saber, a Full Stack Web Developer with 9 years of experience. Proficient in various frameworks and languages including Laravel, PHP, React, and NextJS."
 }
 
 export default function AboutPage() {
   return (
-    <section className="grid xl:grid-cols-8 grid-cols-1 items-center justify-center">
+    <section className="grid xl:grid-cols-8 grid-cols-1 gap-10 items-center justify-center">
       <section className="col-span-5 py-8 space-y-8">
         <AboutIntroSection />
         <AboutSkillsSection />

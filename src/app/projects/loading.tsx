@@ -1,6 +1,6 @@
 import React from "react"
 
-import { ProjectContainerSkeleton } from "./_components/skeletons/project-container"
+import { ProjectContainerSkeleton } from "./_components/project-skeleton"
 import { Skeleton } from "@/components/ui/skeleton"
 
 export default function ProjectsLoading() {
@@ -16,7 +16,7 @@ export default function ProjectsLoading() {
           <Skeleton className="h-8 w-16 rounded-md bg-gray-300" />
         </div>
       </div>
-      <section className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-4">
+      <section className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-4">
         {Array.from({ length: 12 }).map((i, index) => (
           <ProjectContainerSkeleton key={`project-skeleton-${index}`} />
         ))}

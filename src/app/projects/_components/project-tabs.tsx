@@ -9,17 +9,17 @@ import { useContext } from "react"
 import { cn, projectsTabs } from "@/lib"
 import { motion } from "framer-motion"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { Check } from "lucide-react"
 
 export const ProjectTabs = () => {
   const variants = {
     initial: { opacity: 0, y: -10 },
-    animate: { opacity: 1, y: 0 },
+    animate: { opacity: 1, y: 0 }
   }
 
   const pathname = usePathname()
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <div className="flex gap-2 h-fit justify-center flex-wrap">

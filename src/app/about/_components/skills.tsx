@@ -5,14 +5,14 @@ import React, { useContext } from "react"
 import ShimmerButton from "@/components/ui/shimmer-button"
 import translate from "@/lib/translate"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 
 import { skills } from "@/lib/skills"
 import { motion } from "framer-motion"
 import { cn } from "@/lib"
 
 export const AboutSkillsSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section>
@@ -28,7 +28,7 @@ export const AboutSkillsSection = () => {
             className="relative"
             key={`skull-about-${index}`}
           >
-            <ShimmerButton className="shadow-2xl flex gap-2 py-2 items-center w-full justify-start  ">
+            <ShimmerButton className="shadow-2xl flex gap-4 py-2 items-center w-full justify-start">
               <Image
                 className={cn(skill.label === "Next.js" && "invert", "size-4")}
                 src={skill.logo}

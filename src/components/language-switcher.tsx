@@ -1,30 +1,28 @@
 "use client"
 
+import cookies from "js-cookie"
+import translate from "@/lib/translate"
+
 import { useRouter } from "next/navigation"
-import { useContext } from "react"
+import { useLanguage } from "@/hooks/use-language"
+import { cn, languageCookie } from "@/lib"
 
 import { Button, ButtonProps } from "@/components/ui/button"
+import { Language } from "@/types"
+import { Globe } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
-import { LanguageContext } from "@/providers/language"
-import { Language } from "@/types"
-
-import { cn, languageCookie } from "@/lib"
-
-import cookies from "js-cookie"
-import translate from "@/lib/translate"
-import { Globe } from "lucide-react"
 
 type Props = ButtonProps & {
   label?: string
 }
 
 export function LanguageSwitcher({ label, className, size = "icon", variant = "ghost" }: Props) {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
   const router = useRouter()
 
   const changeLanguage = (language: Language) => {

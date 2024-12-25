@@ -2,26 +2,26 @@
 
 import translate from "@/lib/translate"
 import ShinyButton from "@/components/ui/shiny-button"
+import Link from "next/link"
 
-import { useContext, useState } from "react"
+import { usePathname } from "next/navigation"
+import { useLanguage } from "@/hooks/use-language"
+import { useState } from "react"
 import { navbarURLs } from "../data"
 import { cn, routes } from "@/lib"
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { MobileNavbarLink } from "./item"
 import { LanguageSwitcher } from "@/components/language-switcher"
-import { LanguageContext } from "@/providers/language"
+import { FileIcon, Menu } from "lucide-react"
 import { ThemeSwitcher } from "@/components/theme-switcher"
 import { Separator } from "@/components/ui/separator"
 import { Logo } from "@/components/logo"
-import { FileIcon, Menu } from "lucide-react"
-import { MobileNavbarLink } from "./item"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
 
 export const MobileNavbar = () => {
   const [open, setOpen] = useState(false)
 
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
   const pathname = usePathname()
 
   const handleClose = () => {
@@ -33,7 +33,7 @@ export const MobileNavbar = () => {
       className={cn(
         "p-8 py-3",
         "flex items-center justify-between",
-        "z-50 border-b bg-white dark:bg-transparent border-gray-200 dark:border-gray-600/30 bg-background/20 rounded-md mx-auto shadow-sm xl:shadow-none md:shadow-none",
+        "z-50 border-b dark:bg-transparent  dark:darkBorder bg-darkBg rounded-md mx-auto shadow-sm xl:shadow-none md:shadow-none",
         "xl:hidden md:hidden lg:hidden",
         "bg-white"
       )}
@@ -47,7 +47,7 @@ export const MobileNavbar = () => {
           </ShinyButton>
         </SheetTrigger>
 
-        <SheetContent>
+        <SheetContent className="bg-darkBg">
           <SheetHeader className="mb-4">
             <SheetTitle
               onClick={handleClose}

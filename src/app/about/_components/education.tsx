@@ -4,10 +4,10 @@ import React, { useContext } from "react"
 import translate from "@/lib/translate"
 
 import { Building } from "lucide-react"
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 
 export const AboutEducationSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section>

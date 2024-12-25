@@ -19,7 +19,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
       shimmerSize = "0.1em",
       shimmerDuration = "3s",
       borderRadius = "8px",
-      background = "#000",
+      background = "#121015",
       className,
       children,
       ...props
@@ -35,7 +35,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
             "--radius": borderRadius,
             "--speed": shimmerDuration,
             "--cut": shimmerSize,
-            "--bg": background,
+            "--bg": background
           } as CSSProperties
         }
         className={cn(

@@ -9,12 +9,12 @@ export const homePage = {
   lastProject: {
     url: "https://ab2a-qalbne.vercel.app/",
     pcPicture: "/home/last-project-lg.png",
-    mobilePicture: "/home/last-project-sm.png",
+    mobilePicture: "/home/last-project-sm.png"
   },
 
   introLinks: [
     { icon: GitHubLogoIcon, title: "GitHub", href: links.github },
-    { icon: LinkedInLogoIcon, title: "Linkedin", href: links.linkedin },
+    { icon: LinkedInLogoIcon, title: "Linkedin", href: links.linkedin }
   ],
 
   services: [
@@ -24,7 +24,7 @@ export const homePage = {
       arDescription:
         "تخصصي في إنشاء مواقع الويب الاستجابة وسهلة الاستخدام التي لا تعتمد فقط على الجاذبية البصرية ولكن أيضًا محسنة للأداء والاستخدام. تغطي خبرتي مجموعة واسعة من خدمات تطوير الويب",
       enDescription:
-        "I specialize in creating responsive, user-friendly websites that are not only visually appealing but also optimized for performance and usability. My expertise covers a wide range of web development services",
+        "I specialize in creating responsive, user-friendly websites that are not only visually appealing but also optimized for performance and usability. My expertise covers a wide range of web development services"
     },
     {
       arTitle: "تصميم المواقع",
@@ -32,7 +32,7 @@ export const homePage = {
       arDescription:
         "أقوم ببناء مواقع ويب مصممة خصيصًا من البداية باستخدام أحدث التقنيات وأفضل الممارسات في الصناعة. سواء كنت بحاجة إلى موقع ويب للشركات أو منصة تجارة إلكترونية أو محفظة شخصية ، أقدم حلولًا تلبي احتياجاتك الخاصة.",
       enDescription:
-        "I build tailor-made websites from scratch using the latest technologies and industry best practices. Whether you need a corporate website, e-commerce platform, or a personal portfolio, I deliver solutions that fit your specific needs.",
+        "I build tailor-made websites from scratch using the latest technologies and industry best practices. Whether you need a corporate website, e-commerce platform, or a personal portfolio, I deliver solutions that fit your specific needs."
     },
 
     {
@@ -41,7 +41,7 @@ export const homePage = {
       arDescription:
         "أقدم خدمات تطوير شاملة تشمل كلاً من الواجهة الأمامية والخلفية، مما يوفر تطبيق ويب كامل ومتكامل.",
       enDescription:
-        "I offer comprehensive development services that include both front-end and back-end, delivering a complete and cohesive web application.",
+        "I offer comprehensive development services that include both front-end and back-end, delivering a complete and cohesive web application."
     },
 
     {
@@ -50,7 +50,7 @@ export const homePage = {
       arDescription:
         "أدمج تقنيات تحسين محركات البحث (SEO) على الصفحة لتحسين رؤية موقعك في محركات البحث وجذب المزيد من الزوار.",
       enDescription:
-        "I incorporate on-page SEO techniques to help improve your site's visibility in search engines and attract more visitors.",
+        "I incorporate on-page SEO techniques to help improve your site's visibility in search engines and attract more visitors."
     },
 
     {
@@ -59,7 +59,7 @@ export const homePage = {
       arDescription:
         "من بوابات الدفع إلى الخدمات الخارجية، لدي خبرة في دمج واجهات برمجة التطبيقات المختلفة لتوسيع وظائف موقعك.",
       enDescription:
-        "From payment gateways to third-party services, I have experience in integrating various APIs to extend the functionality of your website.",
+        "From payment gateways to third-party services, I have experience in integrating various APIs to extend the functionality of your website."
     },
 
     {
@@ -68,7 +68,7 @@ export const homePage = {
       arDescription:
         "أقدم دعماً مستمراً وتحديثات لضمان بقاء موقعك آمناً، وظيفياً، ومواكباً لأحدث التقنيات.",
       enDescription:
-        "I provide ongoing support and updates to ensure your website remains secure, functional, and up-to-date with the latest technologies.",
-    },
-  ],
+        "I provide ongoing support and updates to ensure your website remains secure, functional, and up-to-date with the latest technologies."
+    }
+  ]
 }

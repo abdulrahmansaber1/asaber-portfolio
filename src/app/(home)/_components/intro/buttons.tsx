@@ -1,14 +1,14 @@
 import { useContext } from "react"
 import { routes } from "@/lib"
 
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 import { LinkBtn } from "@/components/button"
 import { ChevronsLeft, ChevronsRight, Target } from "lucide-react"
 
 import translate from "@/lib/translate"
 
 export const HomeIntroButtonsSection = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
 
   return (
     <section className="flex gap-2 justify-center">

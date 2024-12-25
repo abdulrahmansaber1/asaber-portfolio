@@ -9,7 +9,7 @@ import { useContext } from "react"
 import { cn } from "@/lib"
 
 import { LucideIcon } from "lucide-react"
-import { LanguageContext } from "@/providers/language"
+import { useLanguage } from "@/hooks/use-language"
 
 type Props = {
   href: string
@@ -18,7 +18,7 @@ type Props = {
 }
 
 export const NavbarItem = ({ href, icon: Icon, label }: Props) => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
   const pathname = usePathname()
 
   const isLinkActive = pathname.endsWith(href)

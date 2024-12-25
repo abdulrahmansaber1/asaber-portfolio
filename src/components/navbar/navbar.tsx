@@ -4,19 +4,20 @@ import Link from "next/link"
 import ShinyButton from "@/components/ui/shiny-button"
 import translate from "@/lib/translate"
 
-import { useContext } from "react"
+import { useLanguage } from "@/hooks/use-language"
+import { usePathname } from "next/navigation"
+
 import { navbarURLs } from "./data"
 import { cn, routes } from "@/lib"
 
-import { LanguageContext } from "@/providers/language"
 import { LanguageSwitcher } from "../language-switcher"
 import { ThemeSwitcher } from "../theme-switcher"
 import { NavbarItem } from "./item"
 import { Logo } from "../logo"
-import { usePathname } from "next/navigation"
+import { Download } from "lucide-react"
 
 export const Navbar = () => {
-  const language = useContext(LanguageContext)
+  const language = useLanguage()
   const pathname = usePathname()
 
   return (
@@ -37,10 +38,7 @@ export const Navbar = () => {
               href={"/cv.pdf"}
               download="/cv.pdf"
               className={cn(
-                "block px-3 py-2 rounded-md transition-all text-sm dark:hover:bg-accent font-semibold hover:bg-gray-100 dark:text-gray-300 dark:hover:text-gray-50",
-                pathname.endsWith("/cv.pdf")
-                  ? "bg-primary hover:bg-primary dark:hover:bg-primary text-gray-50 dark:text-gray-50"
-                  : "text-gray-600 dark:text-gray-300"
+                "px-3 py-2 rounded-md transition-all text-sm dark:hover:bg-accent font-semibold hover:bg-gray-100 dark:text-gray-300 dark:hover:text-gray-50 flex gap-2"
               )}
             >
               {translate("cv", language)}
