@@ -14,7 +14,6 @@ import { LanguageSwitcher } from "../language-switcher"
 import { ThemeSwitcher } from "../theme-switcher"
 import { NavbarItem } from "./item"
 import { Logo } from "../logo"
-import { Download } from "lucide-react"
 
 export const Navbar = () => {
   const language = useLanguage()
@@ -23,8 +22,9 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 flex xl:border md:border dark:bg-transparent border-gray-200 dark:border-gray-600/30 bg-background/20 xl:flex-row md:flex-row gap-4 flex-col justify-between items-center my-4 max-w-screen-2xl rounded-full p-2 px-7 mx-auto shadow-md xl:shadow-none md:shadow-none",
+        "z-50 flex xl:border md:border dark:bg-transparent border-gray-200 dark:border-transparent dark:bg-darkBg bg-background/20 xl:flex-row md:flex-row gap-4 flex-col justify-between items-center my-4 max-w-screen-2xl rounded-full p-2 px-7 mx-auto",
         "hidden xl:flex md:flex",
+        "dark:shadow-2xl shadow-sm",
         "bg-white"
       )}
     >
