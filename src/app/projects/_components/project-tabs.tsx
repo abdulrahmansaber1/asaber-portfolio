@@ -4,12 +4,11 @@ import Link from "next/link"
 import translate from "@/lib/translate"
 
 import { usePathname } from "next/navigation"
-import { useContext } from "react"
+import { useLanguage } from "@/hooks/use-language"
 
 import { cn, projectsTabs } from "@/lib"
 import { motion } from "framer-motion"
 
-import { useLanguage } from "@/hooks/use-language"
 import { Check } from "lucide-react"
 
 export const ProjectTabs = () => {
@@ -22,14 +21,14 @@ export const ProjectTabs = () => {
   const language = useLanguage()
 
   return (
-    <div className="flex gap-2 h-fit justify-center flex-wrap">
+    <div className='flex gap-2 h-fit justify-center flex-wrap'>
       {projectsTabs.map((tab, index) => (
         <motion.div
           transition={{ duration: 0.5, delay: 0.1 * index }}
           key={tab.name + index}
           variants={variants}
-          initial="initial"
-          animate="animate"
+          initial='initial'
+          animate='animate'
         >
           <Link
             href={tab.href}
@@ -38,7 +37,7 @@ export const ProjectTabs = () => {
               tab.href === pathname && "bg-indigo-900 text-white dark:bg-indigo-900"
             )}
           >
-            {pathname === tab.href && <Check className="size-4" />}
+            {pathname === tab.href && <Check className='size-4' />}
             {translate(tab.name, language)}
           </Link>
         </motion.div>

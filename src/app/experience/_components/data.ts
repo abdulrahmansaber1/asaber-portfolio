@@ -2,6 +2,13 @@ import { TimelineItemProps } from "@/components/ui/timeline"
 
 export const experiences: TimelineItemProps[] = [
   {
+    title: "Software Engineer",
+    date: "Dec 2024 - Present",
+    label: "CoreVine",
+    description:
+      "Designed, developed, and maintained dynamic web applications using Laravel (PHP) for robust backend APIs and Next.js (React) for fast, scalable front-end interfaces. Collaborated with cross-functional teams to gather requirements, define application features, and deliver user-friendly solutions."
+  },
+  {
     title: "Full Stack Web Developer",
     date: "2024 - Present",
     label: "Freelancer",
