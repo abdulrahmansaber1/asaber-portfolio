@@ -1,18 +1,16 @@
 import Link from "next/link"
-import translate from "@/lib/translate"
 
-import { useContext } from "react"
+import { useLanguage } from "@/hooks/use-language"
 import { homePage } from "../data"
 import { cn } from "@/lib"
 
-import { useLanguage } from "@/hooks/use-language"
 import { FileIcon } from "lucide-react"
 
 export const HomeIntroLinksSection = () => {
   const language = useLanguage()
 
   return (
-    <section className="flex gap-6 justify-center">
+    <section className='flex gap-6 justify-center'>
       {homePage.introLinks.map(({ href, icon: Icon, title }, index) => (
         <Link
           href={href}
@@ -23,7 +21,7 @@ export const HomeIntroLinksSection = () => {
             language === "en" ? "flex-row" : "flex-row-reverse"
           )}
         >
-          <Icon className="size-4" />
+          <Icon className='size-4' />
           <span>{title}</span>
         </Link>
       ))}
@@ -36,7 +34,7 @@ export const HomeIntroLinksSection = () => {
           language === "en" ? "flex-row" : "flex-row-reverse"
         )}
       >
-        <FileIcon className="size-4" />
+        <FileIcon className='size-4' />
         <span>Resume</span>
       </a>
     </section>
