@@ -40,8 +40,7 @@ export const ArabicTranslations: Record<string, string> = {
 
   helloIntro: "مرحبًا، أنا ",
   homeIntroTitle: "عبدالرحمن صابر",
-  homeIntroDescription:
-    "مطور ويب ذو خبرة بدأت هذه الرحلة منذ 9 سنوات. تعلمت العديد من تقنيات وإطارات العمل على الويب، وبناء تطبيقات ويب قابلة للتوسع وذات أداء عالي.",
+  homeIntroDescription: "مطور ويب ذو خبرة بدأت هذه الرحلة منذ 9 سنوات. تعلمت العديد من تقنيات وإطارات العمل على الويب، وبناء تطبيقات ويب قابلة للتوسع وذات أداء عالي.",
   myLastProject: "آخر مشروع لي",
 
   mySkills: "مهاراتي",
@@ -51,12 +50,11 @@ export const ArabicTranslations: Record<string, string> = {
   myServices: "خدماتي",
 
   aboutMe: "عن عبدالرحمن صابر",
-  aboutMeDescription:
-    "مطور ويب ذو خبرة بدأت هذه الرحلة منذ 9 سنوات. ماهر في العديد من الإطارات واللغات بما في ذلك Laravel و PHP و React و NextJS بشغف للتقنيات الجديدة. لقد أكملت بنجاح العديد من المشاريع التي تظهر خبرتي.",
+  aboutMeDescription: "مطور ويب ذو خبرة بدأت هذه الرحلة منذ 9 سنوات. ماهر في العديد من الإطارات واللغات بما في ذلك Laravel و PHP و React و NextJS بشغف للتقنيات الجديدة. لقد أكملت بنجاح العديد من المشاريع التي تظهر خبرتي.",
   education: "التعليم",
   zagizagUniversity: "جامعة الزقازيق",
-  zagizagUniversityDate: "2020 - الوقت الحالي",
-  zagizagUniversityMajor: "الهندسة الكهربائية - هندسة الإلكترونيات والاتصالات",
+  zagizagUniversityDate: "2020 - 2025",
+  zagizagUniversityMajor: "بكالوريوس في هندسة الإلكترونيات والاتصالات",
 
   lastAchievement: "آخر إنجاز",
   viewCredentials: "عرض الشهادة",
@@ -70,9 +68,10 @@ export const ArabicTranslations: Record<string, string> = {
   backEnd: "مشاريع الباك اند",
   frontEnd: "مشاريع الفرو نت اند",
 
-  aiSkills: "مهارات الذكاء الاصطناعي",
-  backEndSkills: "مهارات الباك اند",
-  frontEndSkills: "مهارات الفرونت اند",
+  aiSkills: "الذكاء الاصطناعي",
+  backEndSkills: "الباك اند",
+  frontEndSkills: "الفرونت اند",
+  databaseSkills: "قواعد البيانات",
 
   othersProjects: "مشاريع أخرى",
   backEndProjects: "مشاريع الباك اند",

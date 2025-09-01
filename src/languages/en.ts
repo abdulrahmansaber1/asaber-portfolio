@@ -35,8 +35,7 @@ export const EnglishTranslations: Record<string, string> = {
 
   helloIntro: "Hello, I'm ",
   homeIntroTitle: "Abdulrahman Saber",
-  homeIntroDescription:
-    "An Experienced <b style='color: 	#9c36fc;'>Full Stack Web Developer</b> who embarked this journey 9 years ago. Learning many web technologies and frameworks, and building scalable web applications with high performance.",
+  homeIntroDescription: "An Experienced <b style='color: 	#9c36fc;'>Full Stack Web Developer</b> who embarked this journey 9 years ago. Learning many web technologies and frameworks, and building scalable web applications with high performance.",
 
   myLastProject: "My Last Project",
 
@@ -54,8 +53,8 @@ export const EnglishTranslations: Record<string, string> = {
     "An experienced Full-Stack Web Developer who embarked on this journey 9 years ago. Proficient in various frameworks and languages including Laravel, PHP, React, and NextJS with passion for new technologies. I have successfully completed numerous projects demonstrating my expertise.",
   education: "Education",
   zagizagUniversity: "Zagizag University",
-  zagizagUniversityDate: "2020 - Current",
-  zagizagUniversityMajor: "Electrical Engineering - Electronics and Communications Engineering",
+  zagizagUniversityDate: "2020 - 2025",
+  zagizagUniversityMajor: "B.Sc in Electronics and Communications Engineering",
 
   lastAchievement: "Last Achievement",
   viewCredentials: "View credentials",
@@ -71,6 +70,7 @@ export const EnglishTranslations: Record<string, string> = {
   aiSkills: "AI",
   backEndSkills: "Back-End",
   frontEndSkills: "Front-End",
+  databaseSkills: "Databases",
 
   othersProjects: "Other Projects",
   backEndProjects: "Back-End Projects",
