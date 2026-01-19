@@ -2,30 +2,24 @@ import React from "react"
 
 import { Metadata } from "next"
 import { PageHeader } from "../_components/page-header"
-import { OtherProjectContainer } from "../_components/other-card"
+import { OtherProjectCard } from "../_components/other-project-card"
 
 import { otherProjects } from "../_components/data"
 
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - Other Projects",
-  description:
-    "A list of projects I've worked on. From front-end to back-end, and everything in between."
+  description: "A collection of various projects including mobile apps, games, and frameworks.",
 }
 
 export default function ProjectsPage() {
   return (
-    <div>
+    <>
       <PageHeader title="othersProjects" />
-      <div className="grid xl:grid-cols-2 gap-4">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {otherProjects.map((project, index) => (
-          <OtherProjectContainer
-            key={`${project.title}-other-${index}`}
-            project={project}
-            index={index}
-            type="other"
-          />
+          <OtherProjectCard key={`${project.title}-other-${index}`} project={project} index={index} type="other" />
         ))}
       </div>
-    </div>
+    </>
   )
 }

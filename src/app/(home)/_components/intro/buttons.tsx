@@ -1,28 +1,29 @@
-import { useContext } from "react"
+"use client"
+
 import { routes } from "@/lib"
-
-import { useLanguage } from "@/hooks/use-language"
-import { LinkBtn } from "@/components/button"
 import { ChevronsLeft, ChevronsRight, Target } from "lucide-react"
-
-import translate from "@/lib/translate"
+import { useLocale, useTranslations } from "next-intl"
+import { RetroButton } from "@/components/retroui/Button"
+import Link from "next/link"
+import { motion } from "framer-motion"
 
 export const HomeIntroButtonsSection = () => {
-  const language = useLanguage()
+  const language = useLocale()
+  const translate = useTranslations()
 
   return (
-    <section className="flex gap-2 justify-center">
-      <LinkBtn href={routes.about}>
-        {translate("aboutMe", language)}
-        {language === "en" ? (
-          <ChevronsRight className="size-4" />
-        ) : (
-          <ChevronsLeft className="size-4" />
-        )}
-      </LinkBtn>
-      <LinkBtn href={routes.projects}>
-        {translate("projects", language)} <Target className="size-4" />
-      </LinkBtn>
-    </section>
+    <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="flex flex-wrap gap-4 justify-center pt-4">
+      <Link href={routes.about} passHref>
+        <RetroButton size="lg" className="font-bold min-w-[160px]">
+          {translate("aboutMe")}
+          {language === "en" ? <ChevronsRight className="ml-2 size-5" /> : <ChevronsLeft className="mr-2 size-5" />}
+        </RetroButton>
+      </Link>
+      <Link href={routes.projects} passHref>
+        <RetroButton variant="secondary" size="lg" className="font-bold min-w-[160px] shadow-none hover:shadow-none">
+          {translate("projects")} <Target className="ml-2 size-5" />
+        </RetroButton>
+      </Link>
+    </motion.section>
   )
 }

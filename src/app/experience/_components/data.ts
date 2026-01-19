@@ -1,4 +1,4 @@
-import { TimelineItemProps } from "@/components/ui/timeline"
+import { TimelineItemProps } from "@/components/widgets/animated-widgets/timeline"
 
 export const experiences: TimelineItemProps[] = [
   {

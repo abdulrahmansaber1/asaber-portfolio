@@ -1,13 +1,13 @@
 import Link from "next/link"
 
-import { useLanguage } from "@/hooks/use-language"
 import { homePage } from "../data"
 import { cn } from "@/lib"
 
 import { FileIcon } from "lucide-react"
+import { useLocale } from "next-intl"
 
 export const HomeIntroLinksSection = () => {
-  const language = useLanguage()
+  const language = useLocale()
 
   return (
     <section className='flex gap-6 justify-center'>

@@ -6,118 +6,168 @@ export const frontEndProjects = [
     description: "E-Commerce dashboard with many features to build your pages easily, also it has two different themes ready to use!",
     github: "https://github.com/asaber3030/react-admin-dashboard",
     image: "/projects/front-end/06.png",
-    tools: ["HTML", "Sass", "React", "MUI"]
+    tools: ["HTML", "Sass", "React", "MUI"],
   },
   {
     title: "Landing Page for Company",
     description: "Converting psd, A PhotoShop design to code using HTML, CSS, JavaScript",
     github: "https://github.com/asaber3030/company-react-landing-page",
     image: "/projects/front-end/07.png",
-    tools: ["HTML", "SCSS", "React"]
+    tools: ["HTML", "SCSS", "React"],
   },
   {
     title: "Crypto world",
     description: "Simple landing page for crypto currencies with some information. This template may contains old data about currencies.",
     github: "https://github.com/asaber3030/crypto-world-website",
     image: "/projects/front-end/08.png",
-    tools: ["HTML", "SCSS", "React"]
+    tools: ["HTML", "SCSS", "React"],
   },
   {
     github: "https://github.com/asaber3030/templates/tree/main/01-Done",
     title: "PSD To Template #1",
     description: "Converting psd, A photoshop design to code using HTML, CSS, JavaScript",
     image: "/projects/front-end/01.png",
-    tools: ["HTML", "CSS", "Javascript", "JQuery"]
+    tools: ["HTML", "CSS", "Javascript", "JQuery"],
   },
   {
     title: "PSD To Template #2",
     description: "Converting psd, A photoshop design to code using HTML, CSS, JavaScript",
     github: "https://github.com/asaber3030/templates/tree/main/02-Done",
     image: "/projects/front-end/02.png",
-    tools: ["HTML", "CSS", "Javascript", "JQuery"]
+    tools: ["HTML", "CSS", "Javascript", "JQuery"],
   },
   {
     title: "PSD To Template #3",
     description: "Converting psd, A photoshop design to code using HTML, CSS, JavaScript",
     github: "https://github.com/asaber3030/templates/tree/main/03-Done",
     image: "/projects/front-end/03.png",
-    tools: ["HTML", "CSS", "Javascript", "JQuery"]
+    tools: ["HTML", "CSS", "Javascript", "JQuery"],
   },
   {
     title: "PSD To Template #4",
     description: "Converting psd, A photoshop design to code using HTML, CSS, JavaScript",
     github: "https://github.com/asaber3030/templates/tree/main/04-Done",
     image: "/projects/front-end/04.png",
-    tools: ["HTML", "CSS", "Javascript", "JQuery"]
+    tools: ["HTML", "CSS", "Javascript", "JQuery"],
   },
   {
     title: "PSD To Template #5",
     description: "Converting psd, A photoshop design to code using HTML, CSS, JavaScript",
     github: "https://github.com/asaber3030/templates/tree/main/05-Done",
     image: "/projects/front-end/05.png",
-    tools: ["HTML", "CSS", "Javascript", "JQuery"]
-  }
+    tools: ["HTML", "CSS", "Javascript", "JQuery"],
+  },
 ]
 
 export const backEndProjects = [
   {
     title: "TRide",
     shortBrief: "Smart and secure school transportation app designed for parents to track their children’s rides.",
-    description:
-      "TRide is a smart and secure school transportation app designed for parents to track their children’s rides. The app provides real-time updates on the location of the school bus, ensuring peace of mind for parents. With features like ride history, notifications, and driver details, TRide enhances the safety and convenience of school transportation. Book private cars or shared rides using a user-friendly mobile app with separate parent and driver versions",
+    description: "TRide is a smart and secure school transportation app designed for parents to track their children’s rides. The app provides real-time updates on the location of the school bus, ensuring peace of mind for parents. With features like ride history, notifications, and driver details, TRide enhances the safety and convenience of school transportation. Book private cars or shared rides using a user-friendly mobile app with separate parent and driver versions",
     image: "/projects/back-end/tride.png",
     tools: ["NextJS", "NodeJS", "MySQL", "MongoDB", "Redis", "Socket.io", "Cloudinary"],
     slug: "tride",
     viewUrl: routes.backendProject("tride"),
-    keyFeatures: ["Real-time bus tracking for parents", "Separate mobile apps for parents and drivers", "Ride history and notifications", "Driver details and contact information", "Secure and user-friendly interface"]
+    keyFeatures: ["Real-time bus tracking for parents", "Separate mobile apps for parents and drivers", "Ride history and notifications", "Driver details and contact information", "Secure and user-friendly interface"],
   },
   {
     title: "Nursy",
-    shortBrief: "A platform that connects patients with trusted nurses with real-time updates.",
-    description:
-      "A patient can easily find a nurse for home care, book an appointment, and get real-time updates on the nurse's location. The platform ensures that patients receive quality care from verified nurses, enhancing the overall healthcare experience. Also the patient can pay in-cash or online using credit cards.",
-    image: "/projects/back-end/nursy.jpg",
-    tools: ["NodeJS", "MySQL", "Socket.io", "Cloudinary"],
+    shortBrief: "A comprehensive healthcare platform bridging the gap between patients and professional nurses, facilitating on-demand and scheduled care services.",
+    description: "Nursy is a comprehensive healthcare platform designed to bridge the gap between patients and professional nurses, facilitating on-demand and scheduled care services. The system manages the entire service lifecycle—from booking and nurse verification to real-time communication and secure financial transactions—ensuring a seamless experience for all users. Features multi-role ecosystem with distinct workflows for Patients, Nurses, Custodians, and Administrators.",
+    image: "/projects/back-end/nursy-main.png",
+    tools: ["TypeScript", "Node.js", "Express.js", "MySQL", "Prisma ORM", "Socket.io", "AWS S3", "Cloudinary", "JWT", "NextJS"],
     slug: "nursy",
     viewUrl: routes.backendProject("nursy"),
-    keyFeatures: ["Find and book trusted nurses for home care", "Real-time updates on nurse's location", "Verified nurse profiles for quality assurance", "In-app communication between patients and nurses", "Secure payment options including cash and online payments"]
+    keyFeatures: ["Advanced Booking System with OnSpot and Scheduled requests", "Nurse Verification Pipeline with credential validation", "Real-Time Chat powered by WebSockets", "Complete Wallet System with payment gateway integration (Kashier)", "Geolocation Services for efficient patient-nurse matching", "Multi-Role Ecosystem for all user types"],
   },
   {
     url: "https://ifoe-website.vercel.app/",
-    title: "iFoe - Franchise Management System",
-    shortBrief: "A system for managing franchises, including operations, resources, and performance tracking.",
+    title: "IFOE - Franchise Management System",
+    shortBrief: "A comprehensive franchise management platform designed to streamline franchise operations, applicant management, and business partnerships.",
     description:
-      "iFoe is a comprehensive franchise management system designed to streamline operations across multiple franchise locations. It provides dashboards for individual franchises and central admin control, allowing for efficient resource allocation, performance monitoring, and employee management. The system is tailored to help franchise owners maintain consistency and optimize operations.",
+      "IFOE is a comprehensive franchise management platform designed to streamline franchise operations, applicant management, and business partnerships. The system provides a complete solution for managing franchise opportunities, tracking applications, and facilitating communication between franchisors and potential franchisees. Features include complete CRUD operations, QR code generation for applicants, automated email notifications, mobile application for staff, and content management system.",
     image: "/projects/back-end/ifoe-main.PNG",
-    tools: ["Laravel", "NextJS", "TailwindCSS"],
+    tools: ["Laravel 11", "PHP 8.2", "NextJS", "TailwindCSS", "Sanctum", "Eloquent ORM", "Intervention Image", "QRCode", "Maatwebsite Excel"],
     slug: "ifoe-franchise-management-system",
     viewUrl: routes.backendProject("ifoe-franchise-management-system"),
-    keyFeatures: ["Centralized admin dashboard for managing all franchises", "Individual dashboards for each franchise location", "Resource allocation and performance tracking", "Employee and operations management tools", "Real-time analytics for decision-making"]
+    keyFeatures: ["Complete Franchise Management with multi-image support", "Applicant Management System with QR code generation", "Franchise Request Workflow with status tracking", "Mobile Staff Application for on-the-go management", "Content Management System with blog posts", "Data Export functionality for reporting"],
+  },
+  {
+    title: "Ab2a Qablne Restaurant",
+    shortBrief: "A modern, full-featured restaurant web application enabling online menu browsing, user authentication, order management, and admin controls.",
+    description:
+      "Ab2a Qablne Restaurant Web Application is a comprehensive platform designed to streamline restaurant operations and enhance customer experience. The application allows users to browse the menu, place orders, and manage their profiles, while administrators can oversee orders, manage menu items, and handle user accounts. Built with a focus on performance, scalability, and user-friendly design, the project leverages modern web technologies and best practices to deliver a seamless experience for both customers and staff.",
+    image: "/projects/back-end/ab2a-main.png",
+    url: "https://ab2a-qalbne.vercel.app/",
+    tools: ["NextJS", "TypeScript", "TailwindCSS", "Prisma ORM", "PostgreSQL", "Redux Toolkit", "React Query", "Firebase", "AWS S3"],
+    slug: "ab2a-qablne-restaurant",
+    viewUrl: routes.backendProject("ab2a-qablne-restaurant"),
+    keyFeatures: ["User authentication and registration", "Dynamic menu browsing with categories and offers", "Order placement and order history tracking", "Admin dashboard for managing menu, orders, and users", "Coupon and discount management", "Multilingual support (Arabic & English)"],
+  },
+  {
+    url: "https://corevine-website.vercel.app/",
+    title: "Corevine - Corporate Web Platform & CMS",
+    shortBrief: "A high-performance, full-stack corporate web application with a custom-built Admin Dashboard (CMS) for managing dynamic content.",
+    description: "A high-performance, full-stack corporate web application built with Next.js 15 and TypeScript. This project features a dual-interface architecture: a premium, animated public-facing website and a secure, custom-built Admin Dashboard (CMS). It empowers administrators to manage dynamic content—including blogs, career openings, and portfolio projects—while offering robust SEO management and bilingual support (English & Arabic).",
+    image: "/projects/back-end/corevine-main.png",
+    tools: ["NextJS 15", "TypeScript", "PostgreSQL", "Prisma & Drizzle ORM", "TanStack Query", "TailwindCSS", "Radix UI", "Framer Motion", "Tiptap Editor", "JWT", "Zod"],
+    slug: "corevine-corporate-platform",
+    viewUrl: routes.backendProject("corevine-corporate-platform"),
+    keyFeatures: ["Custom CMS Dashboard for CRUD operations", "Advanced SEO Management for all pages", "Bilingual Internationalization (English & Arabic)", "Rich Text Editing with Tiptap editor", "Secure Authentication & RBAC with JWT", "Premium UI/UX with Framer Motion animations"],
+  },
+  {
+    title: "Corevine Travel CRM",
+    shortBrief: "A comprehensive CRM and Reservation system designed for the travel and hospitality industry, managing hotels, cars, and transfers.",
+    description:
+      "A comprehensive Customer Relationship Management (CRM) and Reservation system designed specifically for the travel and hospitality industry. This application streamlines the entire booking lifecycle, from initial client inquiry to reservation management (Hotels, Cars, Airport Transfers) and financial processing (Invoicing, Payments). It serves as a centralized hub for managing clients, agents, and service providers with automated document generation and multi-currency support.",
+    image: "/projects/back-end/crm-main.png",
+    tools: ["NextJS", "TailwindCSS", "Laravel 11", "PHP 8.2", "MySQL", "Sanctum", "DomPDF", "Spatie Activitylog"],
+    slug: "corevine-travel-crm",
+    viewUrl: routes.backendProject("corevine-travel-crm"),
+    keyFeatures: ["Multi-Vertical Reservation System for Hotels, Cars, and Airport Transfers", "Financial Management Suite with Invoices, Payments, and multi-currency support", "Inventory & Logistics management for hotels and transport", "Automated PDF generation for Vouchers and Invoices", "CRM Core for Clients, Companies, and Agents management", "Audit & Security with Activity Logging"],
+  },
+  {
+    title: "Exams Dashboard",
+    shortBrief: "A comprehensive web platform for managing, creating, and analyzing online exams, tailored for educational institutions and educators.",
+    description: "Exams Dashboard is a full-featured web application designed to streamline the process of exam management for both administrators and students. The platform enables users to create, organize, and distribute exams, manage subjects and folders, and analyze results with detailed reporting tools. With a modern, responsive interface, the dashboard supports user authentication, role-based access (admin and user), and multi-language support.",
+    image: "/projects/back-end/exams-main.png",
+    tools: ["NextJS", "TypeScript", "Prisma ORM", "PostgreSQL", "TailwindCSS", "Cloudinary", "ESLint", "Docker"],
+    slug: "exams-dashboard",
+    viewUrl: routes.backendProject("exams-dashboard"),
+    keyFeatures: ["Exam creation, editing, and organization by subjects and folders", "Real-time analytics and detailed exam reports", "User authentication and role-based access (admin/user)", "Multi-language support (English, Arabic)", "Cloud media management with Cloudinary", "Admin dashboard for managing users, exams, and results"],
+  },
+  {
+    title: "Projekto - Project Management SaaS",
+    shortBrief: "A full-stack, enterprise-grade SaaS platform for team collaboration and project management with real-time features and multi-organization support.",
+    description: "A comprehensive project management system built as a Software-as-a-Service platform that enables teams to collaborate efficiently. The system provides complete project lifecycle management with real-time communication, task tracking, and organizational workflows. Features include multi-tenant architecture supporting multiple organizations, subscription-based access, granular permission controls, and interactive Kanban boards.",
+    image: "/projects/back-end/projekto-main.png",
+    tools: ["NextJS 14", "TypeScript", "React Query", "TailwindCSS", "NodeJS", "Express.js", "MongoDB", "MySQL", "Redis", "Socket.io", "Zod", "Zustand"],
+    slug: "projekto-project-management",
+    viewUrl: routes.backendProject("projekto-project-management"),
+    keyFeatures: ["Multi-Organization Management with isolated workspaces", "Project & Task Management with complete CRUD operations", "Interactive Kanban Boards with drag-and-drop", "Real-time Chat powered by WebSockets", "Role-Based Access Control with custom roles", "Subscription Management with multiple pricing plans"],
   },
   {
     title: "Candles Store",
     shortBrief: "A store for selling candles and gifts for special occasions. You can order using the website the website will support online payments soon",
-    description:
-      "An e-commerce platform for a candle and gift store, designed to simplify the shopping experience for customers celebrating special occasions. The website allows users to browse a curated collection of candles and gifts, place orders, and view product details. While online payments will be supported soon, the platform is fully functional for order placement.",
+    description: "An e-commerce platform for a candle and gift store, designed to simplify the shopping experience for customers celebrating special occasions. The website allows users to browse a curated collection of candles and gifts, place orders, and view product details. While online payments will be supported soon, the platform is fully functional for order placement.",
     image: "/projects/back-end/candle-store-main.PNG",
     gif: "/projects/back-end/gifs/candle-store.gif",
     tools: ["NextJS", "Prisma", "Redux", "TailwindCss", "MySQL"],
     slug: "candles-store",
     viewUrl: routes.backendProject("candles-store"),
-    keyFeatures: ["Browse curated candles and gifts", "Order placement functionality", "Product detail view", "Responsive design", "Future support for online payments"]
+    keyFeatures: ["Browse curated candles and gifts", "Order placement functionality", "Product detail view", "Responsive design", "Future support for online payments"],
   },
   {
     url: "https://techmed-project.vercel.app/administrators/login",
     title: "Hospital Mangament System",
     shortBrief: "A system for handling multiple hospitals with their resources, patients, employees, and medicine.",
-    description:
-      "This application has the ability to handle large hospitals with multiple resources, patients, employees, and medicine. It has a dashboard for each hospital to manage its resources and employees. Also, it has a dashboard for the admin to manage all hospitals and their resources. You can assign permissions to each employee and manage the medicine and patients.",
+    description: "This application has the ability to handle large hospitals with multiple resources, patients, employees, and medicine. It has a dashboard for each hospital to manage its resources and employees. Also, it has a dashboard for the admin to manage all hospitals and their resources. You can assign permissions to each employee and manage the medicine and patients.",
     image: "/projects/back-end/hospital-main.PNG",
     gif: "/projects/back-end/gifs/hospital-system.gif",
     tools: ["NextJS", "Prisma", "Redux", "TailwindCss", "MySQL", "Supabase"],
     slug: "hospital-mangament-system",
     viewUrl: routes.backendProject("hospital-mangament-system"),
-    keyFeatures: ["Admin dashboard for centralized hospital management", "Individual hospital dashboards for resource tracking", "Permission-based employee management", "Medicine inventory and patient tracking", "Scalable design for large hospitals"]
+    keyFeatures: ["Admin dashboard for centralized hospital management", "Individual hospital dashboards for resource tracking", "Permission-based employee management", "Medicine inventory and patient tracking", "Scalable design for large hospitals"],
   },
   {
     title: "Interviewer App",
@@ -130,31 +180,7 @@ export const backEndProjects = [
     tools: ["NextJS", "Redux", "TailwindCss", "MySQL"],
     slug: "interviewer-app",
     viewUrl: routes.backendProject("interviewer-app"),
-    keyFeatures: ["Admin dashboard for hospital management", "Resource and medicine tracking", "Permission-based employee management", "Patient management", "Data visualization for resources"]
-  },
-
-  {
-    github: "https://github.com/asaber3030/nextjs-online-restaurant/",
-    title: "Online Restaurant",
-    shortBrief: "Online restaurant for ordering food.",
-    description: "A full application with admin dashboard for managing orders, products, and users. Also, it has a user dashboard for ordering food and tracking orders.",
-    image: "/projects/back-end/nextjs-online-restaurant.png",
-    url: "https://ab2a-qalbne.vercel.app/",
-    tools: ["NextJS", "TailwindCss", "AWS S3", "Prisma", "MySQL"],
-    slug: "online-restaurant",
-    viewUrl: routes.backendProject("online-restaurant"),
-    keyFeatures: ["Admin dashboard for managing orders", "User dashboard for food ordering", "Order tracking", "Product and user management", "Integration with AWS S3 for storage"]
-  },
-  {
-    github: "https://github.com/asaber3030/nextjs-project-managment-app",
-    title: "Platfrom",
-    shortBrief: "Saas platform for managing projects, teams, and tasks.",
-    description: "You can choose your plan and start managing your projects, teams, and tasks. Also, you can invite your team members to join your team.",
-    image: "/projects/back-end/project-managment.png",
-    tools: ["NextJS", "TailwindCss", "Stripe", "Prisma", "MySQL"],
-    slug: "platfrom",
-    viewUrl: routes.backendProject("platfrom"),
-    keyFeatures: ["Project and task management", "Team collaboration features", "Subscription plans integration", "User-friendly design", "Payment integration with Stripe"]
+    keyFeatures: ["Admin dashboard for hospital management", "Resource and medicine tracking", "Permission-based employee management", "Patient management", "Data visualization for resources"],
   },
   {
     github: "https://github.com/asaber3030/social-media-app",
@@ -166,7 +192,7 @@ export const backEndProjects = [
     tools: ["NextJS", "TailwindCss", "Prisma", "MySQL"],
     slug: "social-media",
     viewUrl: routes.backendProject("social-media"),
-    keyFeatures: ["Follow and interact with users", "Post articles, pictures, and reels", "User-friendly timeline", "Real-time notifications", "Modern and responsive design"]
+    keyFeatures: ["Follow and interact with users", "Post articles, pictures, and reels", "User-friendly timeline", "Real-time notifications", "Modern and responsive design"],
   },
   {
     url: "https://hardware-store-zeta.vercel.app/",
@@ -179,7 +205,7 @@ export const backEndProjects = [
     tools: ["NextJS", "TailwindCss", "Prisma", "MySQL"],
     slug: "hardware-store",
     viewUrl: routes.backendProject("hardware-store"),
-    keyFeatures: ["Browse and purchase PC components", "Order tracking", "Responsive UI design", "Product search functionality", "Future payment integration"]
+    keyFeatures: ["Browse and purchase PC components", "Order tracking", "Responsive UI design", "Product search functionality", "Future payment integration"],
   },
   {
     url: "",
@@ -192,7 +218,7 @@ export const backEndProjects = [
     tools: ["Laravel", "React.js", "Inertia.js", "SASS"],
     slug: "faculty-education-system",
     viewUrl: routes.backendProject("faculty-education-system"),
-    keyFeatures: ["Student management dashboard", "Quiz and exam handling", "Grade tracking", "Teacher and admin dashboards", "Modern and efficient design"]
+    keyFeatures: ["Student management dashboard", "Quiz and exam handling", "Grade tracking", "Teacher and admin dashboards", "Modern and efficient design"],
   },
   {
     url: "",
@@ -205,7 +231,7 @@ export const backEndProjects = [
     tools: ["NextJS", "TailwindCss", "Clerk", "Convex"],
     slug: "board-app",
     viewUrl: routes.backendProject("board-app"),
-    keyFeatures: ["Collaborative board sharing", "Drawing and writing tools", "Real-time synchronization", "User-friendly interface", "Secure sharing options"]
+    keyFeatures: ["Collaborative board sharing", "Drawing and writing tools", "Real-time synchronization", "User-friendly interface", "Secure sharing options"],
   },
   {
     url: "",
@@ -218,7 +244,7 @@ export const backEndProjects = [
     tools: ["NextJS", "Convex", "EdgeStore", "TailwindCss"],
     slug: "notion-clone",
     viewUrl: "routes.backendProject('notion-clone')",
-    keyFeatures: ["Real-time note synchronization", "Collaborative editing", "Rich text formatting options", "User-friendly interface", "Secure data storage"]
+    keyFeatures: ["Real-time note synchronization", "Collaborative editing", "Rich text formatting options", "User-friendly interface", "Secure data storage"],
   },
   {
     url: "",
@@ -231,7 +257,7 @@ export const backEndProjects = [
     tools: ["Laravel", "React", "SASS"],
     slug: "inote-engineering-company-dashboard",
     viewUrl: "routes.backendProject('inote-engineering-company-dashboard')",
-    keyFeatures: ["Project management tools", "Resource tracking", "Data visualization dashboards", "User access control", "Real-time updates"]
+    keyFeatures: ["Project management tools", "Resource tracking", "Data visualization dashboards", "User access control", "Real-time updates"],
   },
   {
     url: "",
@@ -244,7 +270,7 @@ export const backEndProjects = [
     tools: ["Laravel", "React", "SASS", "InertiaJS"],
     slug: "burger-order",
     viewUrl: "routes.backendProject('burger-order')",
-    keyFeatures: ["Online food ordering", "Coupon management", "Order tracking", "Customizable menu options", "Responsive design"]
+    keyFeatures: ["Online food ordering", "Coupon management", "Order tracking", "Customizable menu options", "Responsive design"],
   },
   {
     url: "",
@@ -257,7 +283,7 @@ export const backEndProjects = [
     tools: ["Laravel", "Livewire", "SASS"],
     slug: "blog-online-courses-website",
     viewUrl: routes.backendProject("blog-online-courses-website"),
-    keyFeatures: ["Create and publish detailed articles and guides", "Host and share free online courses with users", "Track article and course view counts for analytics", "Real-time content updates powered by Livewire", "Elegant and responsive design for better readability"]
+    keyFeatures: ["Create and publish detailed articles and guides", "Host and share free online courses with users", "Track article and course view counts for analytics", "Real-time content updates powered by Livewire", "Elegant and responsive design for better readability"],
   },
   {
     url: "",
@@ -270,7 +296,7 @@ export const backEndProjects = [
     tools: ["Laravel", "React", "SASS"],
     slug: "store-dashboard",
     viewUrl: routes.backendProject("store-dashboard"),
-    keyFeatures: ["Comprehensive dashboard to monitor sales performance", "Export sales and inventory data to Excel files", "Interactive charts and graphs for data visualization", "Integration with React for dynamic user experience", "Advanced data collection and filtering options"]
+    keyFeatures: ["Comprehensive dashboard to monitor sales performance", "Export sales and inventory data to Excel files", "Interactive charts and graphs for data visualization", "Integration with React for dynamic user experience", "Advanced data collection and filtering options"],
   },
   {
     url: "",
@@ -283,7 +309,7 @@ export const backEndProjects = [
     tools: ["Laravel", "AJAX", "SASS"],
     slug: "full-ecommerce-website",
     viewUrl: routes.backendProject("full-ecommerce-website"),
-    keyFeatures: ["Comprehensive dashboards for admin, seller, and delivery management", "Real-time product inventory and order tracking", "Delivery assignment and status control", "User-friendly shopping experience for PC components", "Developed with Laravel and AJAX for dynamic interactions"]
+    keyFeatures: ["Comprehensive dashboards for admin, seller, and delivery management", "Real-time product inventory and order tracking", "Delivery assignment and status control", "User-friendly shopping experience for PC components", "Developed with Laravel and AJAX for dynamic interactions"],
   },
   {
     github: "https://github.com/asaber3030/MoWatch",
@@ -295,8 +321,8 @@ export const backEndProjects = [
     tools: ["Laravel", "MySQL", "Livewire"],
     slug: "movies-app",
     viewUrl: routes.backendProject("movies-app"),
-    keyFeatures: ["Search for movies and series by title", "View detailed information about cast and crew", "Track revenue and statistics of movies", "Responsive and user-friendly design", "Built using Laravel and Livewire"]
-  }
+    keyFeatures: ["Search for movies and series by title", "View detailed information about cast and crew", "Track revenue and statistics of movies", "Responsive and user-friendly design", "Built using Laravel and Livewire"],
+  },
 ]
 
 export const aiProjects = [
@@ -304,26 +330,26 @@ export const aiProjects = [
     title: "AI-Powered Movies Recommendation System",
     description: "A machine learning-based system that uses user search queries to recommend movies. The project leverages natural language processing and collaborative filtering techniques to provide personalized suggestions.",
     tools: ["Python", "scikit-learn", "Pandas", "NumPy", "nltk"],
-    github: "https://github.com/asaber3030/movie-recommendation-system"
+    github: "https://github.com/asaber3030/movie-recommendation-system",
   },
   {
     title: "Advanced Customer Segmentation Using RFM Analysis",
     description: "A project focused on segmenting customers based on Recency, Frequency, and Monetary (RFM) metrics. The analysis helps businesses identify and target key customer groups effectively, enhancing marketing strategies.",
     tools: ["Python", "scikit-learn", "Pandas", "NumPy", "Seaborn"],
-    github: "https://github.com/asaber3030/customers-segmentation-using-RFM-analysis"
+    github: "https://github.com/asaber3030/customers-segmentation-using-RFM-analysis",
   },
   {
     title: "Neural Network-Based Self-Driving Car Simulation",
     description: "An interactive simulation of self-driving cars using JavaScript and Canvas. This project demonstrates the implementation of neural networks to train the car for obstacle detection and navigation in a virtual environment.",
     tools: ["JavaScript", "Canvas"],
-    github: "https://github.com/asaber3030/self-driving-car"
+    github: "https://github.com/asaber3030/self-driving-car",
   },
   {
     title: "Custom Linear Regression & Classification Models",
     description: "A hands-on project to build simple linear and logistic regression models from scratch using Python. The project involves working with a dummy dataset to test foundational concepts of machine learning.",
     tools: ["Python"],
-    github: "https://github.com/asaber3030/Machine-Learning-Models"
-  }
+    github: "https://github.com/asaber3030/Machine-Learning-Models",
+  },
 ]
 
 export const otherProjects = [
@@ -331,26 +357,26 @@ export const otherProjects = [
     title: "Job Finder Mobile App",
     description: "A mobile application developed using React Native to help users search for new job opportunities. The app uses dummy data to demonstrate the job search functionality and provides an interactive user experience.",
     tools: ["React Native"],
-    github: "https://github.com/asaber3030/jobs-app"
+    github: "https://github.com/asaber3030/jobs-app",
   },
   {
     title: "Monopoly Game with JavaFX GUI",
     description: "A desktop-based Monopoly game implemented as a Windows GUI application using JavaFX. This project was developed as part of a university assignment, showcasing teamwork and expertise in Java application development.",
     tools: ["Java", "JavaFX"],
-    github: "https://github.com/asaber3030/monopoly-game"
+    github: "https://github.com/asaber3030/monopoly-game",
   },
   {
     title: "JavaScript Mini-Projects Collection",
     description: "A series of simple JavaScript applications created to practice and apply concepts learned from JavaScript courses. These projects include various interactive features and demonstrate core JavaScript functionality.",
     tools: ["JavaScript", "HTML"],
-    github: "https://github.com/asaber3030/JavaScript-Projects"
+    github: "https://github.com/asaber3030/JavaScript-Projects",
   },
   {
     title: "Custom PHP MVC Framework",
     description: "A lightweight PHP MVC framework inspired by Laravel, featuring routing, controllers, and models. This project demonstrates the development of a simplified web framework with key Laravel-like functionality.",
     tools: ["PHP"],
-    github: "https://github.com/asaber3030/PHP-MVC-Framework"
-  }
+    github: "https://github.com/asaber3030/PHP-MVC-Framework",
+  },
 ]
 
 export const allProjects = [...backEndProjects, ...frontEndProjects]

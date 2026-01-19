@@ -13,6 +13,7 @@ export type TProject = {
   gif?: string
   slug?: string
   viewUrl?: string
+  keyFeatures?: string[]
 }
 
 export type TOtherProject = {

@@ -9,22 +9,23 @@ import { Metadata } from "next/types"
 
 export const metadata: Metadata = {
   title: "Abdulrahman Saber - About",
-  description:
-    "Learn more about Abdulrahman Saber, a Full Stack Web Developer with 9 years of experience. Proficient in various frameworks and languages including Laravel, PHP, React, and NextJS."
+  description: "Learn more about Abdulrahman Saber, a Full Stack Web Developer with 9 years of experience. Proficient in various frameworks and languages including Laravel, PHP, React, and NextJS.",
 }
 
 export default function AboutPage() {
   return (
-    <section className="grid xl:grid-cols-8 grid-cols-1 gap-10 items-center justify-center">
-      <section className="col-span-5 py-8 space-y-8">
-        <AboutIntroSection />
-        <AboutSkillsSection />
-        <AboutEducationSection />
-        <AboutLastAchievement />
-      </section>
-      <section className="mx-auto col-span-3 w-full flex justify-center">
-        <AboutRightSection />
-      </section>
-    </section>
+    <div className="relative pt-8 pb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <section className="lg:col-span-7 space-y-12">
+          <AboutIntroSection />
+          <AboutSkillsSection />
+          <AboutEducationSection />
+          <AboutLastAchievement />
+        </section>
+        <section className="lg:col-span-5 lg:sticky lg:top-32 flex justify-center">
+          <AboutRightSection />
+        </section>
+      </div>
+    </div>
   )
 }

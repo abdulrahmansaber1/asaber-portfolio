@@ -1,0 +1,337 @@
+# IFOE - Franchise Management System
+
+## 🎯 Project Overview
+
+**IFOE** is a comprehensive franchise management platform designed to streamline franchise operations, applicant management, and business partnerships. The system provides a complete solution for managing franchise opportunities, tracking applications, and facilitating communication between franchisors and potential franchisees.
+
+---
+
+## 🚀 Key Features
+
+### 1. **Franchise Management**
+
+- Complete CRUD operations for franchise listings
+- Multi-image support for franchise presentations
+- Franchise characteristics management (fees, royalties, marketing costs, investment details)
+- Franchise type categorization
+- Advanced filtering and search capabilities
+- Detailed franchise information display
+
+### 2. **Applicant Management System**
+
+- Online application submission with validation
+- QR code generation for each applicant
+- Applicant status tracking (attended/absent)
+- Automated email notifications with QR codes
+- Export functionality for applicant data
+- Mobile application for staff to manage applicants
+- Real-time status updates (manual and automated)
+
+### 3. **Franchise Request Workflow**
+
+- Request submission and tracking
+- Request history logging with change tracking
+- Status management (pending, approved, rejected)
+- User-specific request viewing
+- Administrative approval workflow
+
+### 4. **Content Management System**
+
+- Blog post creation and management
+- Category organization
+- Multi-language support (Arabic primary)
+- Latest blog features for homepage
+- Keyword-based SEO optimization
+
+### 5. **Partner Management**
+
+- Partner profile creation
+- Partnership tracking
+- Display on public-facing website
+
+### 6. **User & Authentication System**
+
+- Role-based access control (Admin, User, Employee)
+- Secure authentication using Laravel Sanctum
+- Profile management
+- Password update functionality
+- User registration and login
+
+### 7. **Mobile Staff Application**
+
+- Dedicated mobile API endpoints
+- Employee authentication
+- Applicant management on-the-go
+- Status change capabilities
+- Statistics dashboard
+- QR code scanning integration
+
+### 8. **Administrative Features**
+
+- Dashboard with key statistics (blogs, users, franchises, partners, applicants)
+- Contract period management
+- Training period configuration
+- Equipment cost tracking
+- Space requirements management
+- Unit management for measurements
+- Country management
+
+### 9. **Communication System**
+
+- Contact form with email integration
+- Message storage and management
+- Automated email notifications
+- QR code email delivery
+
+### 10. **Data Export**
+
+- Excel export functionality for applicants
+- Structured data export for reporting
+
+---
+
+## 🛠️ Tech Stack
+
+### **Backend**
+
+- **Framework:** Laravel 11.31 (PHP 8.2+)
+- **Authentication:** Laravel Sanctum (Token-based API authentication)
+- **Database ORM:** Eloquent
+- **API Architecture:** RESTful API with versioning (v1)
+- **File Upload:** Intervention Image 3.11
+- **QR Code Generation:** Simple QRCode 4.2 & mPDF QRCode 1.2
+- **Excel Export:** Maatwebsite Excel 3.1
+- **Email:** Laravel Mail with Mailable classes
+
+### **Frontend**
+
+- **Framework:** Next.js (React)
+- **Styling:** Tailwind CSS
+- **UI Components:** Modern, responsive design
+
+### **Development Tools**
+
+- **Testing:** PHPUnit 11
+- **Code Quality:** Laravel Pint (PHP code style fixer)
+- **Development Server:** Laravel Sail (Docker)
+- **Debugging:** Laravel Pail
+- **API Testing:** Faker for test data generation
+
+### **Key PHP Packages**
+
+```json
+{
+  "php": "^8.2",
+  "laravel/framework": "^11.31",
+  "laravel/sanctum": "^4.0",
+  "intervention/image": "^3.11",
+  "simplesoftwareio/simple-qrcode": "^4.2",
+  "maatwebsite/excel": "^3.1",
+  "mpdf/qrcode": "^1.2"
+}
+```
+
+---
+
+## 📁 Project Architecture
+
+### **Design Patterns**
+
+- **MVC Architecture** (Model-View-Controller)
+- **Repository Pattern** (for data access)
+- **Form Request Validation** (32+ dedicated request classes)
+- **Service Layer** (for business logic)
+- **Middleware** (authentication, admin authorization)
+
+### **Code Quality Standards**
+
+✅ Type-safe code with PHP 8.2+ features  
+✅ PSR-12 coding standards  
+✅ Comprehensive error handling with try-catch blocks  
+✅ PHPDoc comments for all methods  
+✅ Secure validation using Form Requests  
+✅ Consistent JSON API responses  
+✅ DRY principles applied throughout
+
+### **Security Features**
+
+- Token-based authentication (Sanctum)
+- Role-based access control
+- Mass assignment protection using `$request->validated()`
+- SQL injection prevention via Eloquent ORM
+- CORS configuration
+- Secure password hashing
+- Email validation
+
+---
+
+## 🌐 API Endpoints Structure
+
+### **Public Endpoints**
+
+- Blogs & Categories (read-only)
+- Franchises & Franchise Types (read-only)
+- Applicant submission
+- Contact form submission
+- Franchise request submission
+
+### **Authenticated Endpoints**
+
+- User profile management
+- Password updates
+- User-specific franchise requests
+
+### **Admin-Only Endpoints**
+
+- Full CRUD for all resources
+- User management
+- Applicant management
+- Content management
+- System configuration
+
+### **Mobile Staff Endpoints**
+
+- Employee authentication
+- Applicant status management
+- Statistics viewing
+- QR code validation
+
+---
+
+## 📊 Database Schema
+
+### **Core Models**
+
+- **User** - System users with role-based access
+- **Applicant** - Franchise applicants with QR codes
+- **Franchise** - Franchise listings with relationships
+- **FranchiseRequest** - Applicant requests with tracking
+- **FranchiseRequestHistory** - Audit trail for requests
+- **Blog** - Content management
+- **Category** - Blog categorization
+- **Partner** - Business partners
+- **FranchiseCharacteristic** - Financial details
+- **FranchiseImage** - Multi-image support
+- **FranchiseType** - Franchise categorization
+- **ContractPeriod** - Contract duration options
+- **TrainingPeriod** - Training duration options
+- **EquipmentCost** - Equipment pricing
+- **SpaceRequired** - Space requirement options
+- **Unit** - Measurement units
+- **Country** - Geographic data
+- **Role** - User role definitions
+- **ContactMessage** - Contact form submissions
+
+---
+
+## 🔐 Authentication Flow
+
+1. **User Registration** → Email validation → Account creation
+2. **Login** → Credentials verification → Sanctum token generation
+3. **Token-based requests** → Authorization middleware → Resource access
+4. **Role verification** → Admin middleware → Protected operations
+
+---
+
+## 📧 Email Notifications
+
+- **Applicant QR Code Email** - Sent upon successful application
+- **Contact Form Email** - Forwarded to admin (info@ifoe-sa.com)
+- Arabic language support for all communications
+
+---
+
+## 🎨 Special Features
+
+### **QR Code System**
+
+- Unique QR code for each applicant
+- Stored in `public/applicants_qrcode/` directory
+- Emailed to applicants automatically
+- Used for mobile check-in/verification
+
+### **Multi-Language Support**
+
+- Primary language: Arabic
+- English support available
+- Localized email templates
+
+### **Advanced Filtering**
+
+- Franchise filtering by multiple criteria
+- Search functionality
+- Pagination support
+
+---
+
+## 📱 Mobile Integration
+
+Dedicated mobile API endpoints for staff with:
+
+- Employee authentication system
+- Applicant list viewing
+- Status change capabilities (QR scan & manual)
+- Real-time statistics
+- Secure token-based access
+
+---
+
+## 🚦 Response Format
+
+All API responses follow a consistent structure:
+
+```json
+{
+  "message": "عملية ناجحة",
+  "status": 200,
+  "data": { ... }
+}
+```
+
+Error responses include detailed error messages for debugging.
+
+---
+
+## 📈 Dashboard Statistics
+
+- Total blogs count
+- Total users count
+- Total franchises count
+- Total partners count
+- Attended applicants count
+- Absent applicants count
+
+---
+
+## 🔄 Version Control
+
+- **Repository:** ifoe-laravel-server
+- **Owner:** asaber3030
+- **Branch:** main
+- **API Version:** v1
+
+---
+
+## 🎯 Target Users
+
+1. **System Administrators** - Full system management
+2. **Franchise Managers** - Content and franchise management
+3. **Staff Members** - Applicant and mobile operations
+4. **Public Users** - Browsing franchises and submitting applications
+5. **Franchise Applicants** - Submitting requests and tracking status
+
+---
+
+## 💼 Business Value
+
+IFOE streamlines the entire franchise management process from initial inquiry to approval, providing:
+
+- Efficient applicant tracking
+- Professional communication
+- Data-driven decision making
+- Mobile-first staff operations
+- Scalable architecture for growth
+
+---
+
+**Built with ❤️ using Laravel & Next.js**

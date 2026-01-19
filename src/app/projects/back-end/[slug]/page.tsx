@@ -1,114 +1,93 @@
-"use client"
-
-import React from "react"
 import Image from "next/image"
-import translate from "@/lib/translate"
 
-import { useLanguage } from "@/hooks/use-language"
 import { backEndProjects } from "../../_components/data"
 
-import { CheckCircle2, Github, LinkIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { CheckCircle2, Github, LinkIcon, ArrowLeft } from "lucide-react"
+import { getTranslations } from "next-intl/server"
+import { RetroButton } from "@/components/retroui/Button"
+import Link from "next/link"
+import { routes } from "@/lib"
 
 type Props = {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
-export default function Project({ params }: Props) {
-  const slug = params.slug
+export default async function Project({ params }: Props) {
+  const { slug } = await params
+
   const project = backEndProjects.find((project) => project.slug === slug)
-  const language = useLanguage()
+  const translate = await getTranslations()
+
+  if (!project) return null
 
   return (
-    <div className="space-y-6">
-      <header className="space-y-3">
-        <h1 className="xl:text-4xl text-4xl font-extrabold text-primary">{project?.title}</h1>
-        <p className="text-lg dark:text-gray-400 text-gray-600 max-w-5xl">{project?.description}</p>
+    <div className="relative space-y-12">
+      <Link href={routes.projects} className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-primary transition-colors group">
+        <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" />
+        {translate("goBack")}
+      </Link>
+
+      <header className="space-y-6">
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-primary uppercase">{project.title}</h1>
+        <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-4xl leading-relaxed">{project.description}</p>
       </header>
 
-      <section className="grid xl:grid-cols-6 gap-10">
-        <section className="xl:col-span-3">
-          {project?.gif ? (
-            <Image
-              src={project.gif}
-              alt={project.title}
-              width={500}
-              height={300}
-              className="w-full max-w-full rounded-md"
-            />
-          ) : (
-            project?.image && (
-              <Image
-                src={project?.image}
-                alt={project?.title}
-                width={500}
-                height={300}
-                className="w-full max-w-full rounded-md"
-              />
-            )
-          )}
-        </section>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="lg:col-span-7 space-y-8">
+          <div className="relative aspect-video rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl">
+            <Image src={project.gif || project.image || "/projects/back-end/food-orders.png"} alt={project.title} fill className="object-cover" />
+          </div>
+        </div>
 
-        <section className="xl:col-span-3 space-y-8">
-          <div>
-            <h3 className="mb-2 dark:text-gray-300 text-gray-600 text-xl font-bold">
-              {translate("technologies", language)}
-            </h3>
-            <ul className="flex gap-2">
-              {project?.tools.map((tool, idx) => (
-                <li className="px-2 py-1 bg-gray-300 dark:bg-[#231f27] rounded-sm" key={idx}>
+        <div className="lg:col-span-5 space-y-10">
+          <section className="space-y-4">
+            <h3 className="text-sm font-black uppercase tracking-widest text-primary/70">{translate("technologies")}</h3>
+            <div className="flex flex-wrap gap-2">
+              {project.tools.map((tool, idx) => (
+                <span key={idx} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-bold text-muted-foreground">
                   {tool}
-                </li>
+                </span>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-2 dark:text-gray-300 text-gray-600 text-xl font-bold">
-              {translate("features", language)}
-            </h3>
-            <ul className="p-0 space-y-2">
-              {project?.keyFeatures?.map((feature, idx) => (
-                <li key={`feature-${idx}`} className="flex gap-3 items-center text-lg">
-                  <CheckCircle2 className="text-primary" /> {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {(project?.url || project?.github) && (
-            <div>
-              <h3 className="mb-2 dark:text-gray-300 text-gray-600 text-xl font-bold">
-                {translate("urls", language)}
-              </h3>
-              <ul className="flex gap-2 items-center">
-                {project?.github && (
-                  <li>
-                    <a href={project?.github} target="_blank">
-                      <Button className="gap-2" variant="ghost">
-                        <Github className="size-4" />
-                        {translate("github", language)}
-                      </Button>
-                    </a>
-                  </li>
-                )}
-                {project?.url && (
-                  <li>
-                    <a href={project?.url} target="_blank">
-                      <Button className="gap-2" variant="ghost">
-                        <LinkIcon className="size-4" />
-                        {translate("preview", language)}
-                      </Button>
-                    </a>
-                  </li>
-                )}
-              </ul>
             </div>
+          </section>
+
+          <section className="space-y-4">
+            <h3 className="text-sm font-black uppercase tracking-widest text-primary/70">{translate("features")}</h3>
+            <ul className="space-y-3">
+              {project.keyFeatures?.map((feature, idx) => (
+                <li key={`feature-${idx}`} className="flex items-start gap-3 text-lg font-medium text-muted-foreground">
+                  <CheckCircle2 className="size-6 text-primary shrink-0 mt-0.5" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {(project.url || project.github) && (
+            <section className="space-y-4 pt-8 border-t border-white/5">
+              <h3 className="text-sm font-black uppercase tracking-widest text-primary/70">{translate("links")}</h3>
+              <div className="flex flex-wrap gap-4">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <RetroButton variant="secondary" className="font-bold">
+                      <Github className="mr-2 size-5" />
+                      {translate("github")}
+                    </RetroButton>
+                  </a>
+                )}
+                {project.url && (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">
+                    <RetroButton className="font-bold">
+                      <LinkIcon className="mr-2 size-5" />
+                      {translate("preview")}
+                    </RetroButton>
+                  </a>
+                )}
+              </div>
+            </section>
           )}
-        </section>
-      </section>
+        </div>
+      </div>
     </div>
   )
 }

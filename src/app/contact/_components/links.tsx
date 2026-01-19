@@ -12,33 +12,27 @@ export const ContactLinks = () => {
   }
 
   return (
-    <section className="space-y-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1">
+    <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <motion.a
         initial="initial"
         animate="animate"
         variants={variants}
         transition={{ duration: 0.4, delay: 0 }}
-        className="flex gap-2 items-center font-medium text-gray-600 dark:text-gray-300 group"
+        className="flex gap-3 items-center font-bold text-muted-foreground hover:text-primary transition-colors group"
         href={`mailto:${contact.email}`}
         target="_blank"
       >
-        <div className="size-10 rounded-md flex justify-center items-center dark:bg-[#222] bg-white dark:shadow-2xl shadow-md group-hover:text-white group-hover:bg-primary transition-colors">
-          <Mail className="size-4" />
+        <div className="size-12 rounded-2xl flex justify-center items-center bg-secondary border border-white/5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-lg">
+          <Mail className="size-5" />
         </div>
-        {contact.email}
+        <span className="text-sm md:text-base truncate">{contact.email}</span>
       </motion.a>
 
-      <motion.div
-        initial="initial"
-        animate="animate"
-        variants={variants}
-        transition={{ duration: 0.4, delay: 0.2 }}
-        className="flex gap-2 items-center font-medium text-gray-600 dark:text-gray-300"
-      >
-        <div className="size-10 rounded-md flex justify-center items-center dark:bg-[#222] bg-white dark:shadow-2xl shadow-md group-hover:text-white">
-          <Phone className="size-4" />
+      <motion.div initial="initial" animate="animate" variants={variants} transition={{ duration: 0.4, delay: 0.2 }} className="flex gap-3 items-center font-bold text-muted-foreground group">
+        <div className="size-12 rounded-2xl flex justify-center items-center bg-secondary border border-white/5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-lg">
+          <Phone className="size-5" />
         </div>
-        <bdi>{contact.phone}</bdi>
+        <bdi className="text-sm md:text-base">{contact.phone}</bdi>
       </motion.div>
 
       <motion.a
@@ -46,14 +40,14 @@ export const ContactLinks = () => {
         animate="animate"
         variants={variants}
         transition={{ duration: 0.4, delay: 0.3 }}
-        className="flex gap-2 items-center font-medium text-gray-600 dark:text-gray-300 group"
+        className="flex gap-3 items-center font-bold text-muted-foreground hover:text-primary transition-colors group"
         href={contact.whatsapp}
         target="_blank"
       >
-        <div className="size-10 rounded-md flex justify-center items-center dark:bg-[#222] bg-white dark:shadow-2xl shadow-md group-hover:text-white group-hover:bg-primary transition-colors">
-          <MessageCircle className="size-4" />
+        <div className="size-12 rounded-2xl flex justify-center items-center bg-secondary border border-white/5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-lg">
+          <MessageCircle className="size-5" />
         </div>
-        Whatsapp
+        <span className="text-sm md:text-base">Whatsapp</span>
       </motion.a>
 
       <motion.a
@@ -61,14 +55,14 @@ export const ContactLinks = () => {
         animate="animate"
         variants={variants}
         transition={{ duration: 0.4, delay: 0.4 }}
-        className="flex gap-2 items-center font-medium text-gray-600 dark:text-gray-300 group"
+        className="flex gap-3 items-center font-bold text-muted-foreground hover:text-primary transition-colors group"
         href={contact.telegram}
         target="_blank"
       >
-        <div className="size-10 rounded-md flex justify-center items-center dark:bg-[#222] bg-white dark:shadow-2xl shadow-md group-hover:text-white group-hover:bg-primary transition-colors">
-          <MessageCircle className="size-4" />
+        <div className="size-12 rounded-2xl flex justify-center items-center bg-secondary border border-white/5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-lg">
+          <MessageCircle className="size-5" />
         </div>
-        Telegram
+        <span className="text-sm md:text-base">Telegram</span>
       </motion.a>
     </section>
   )

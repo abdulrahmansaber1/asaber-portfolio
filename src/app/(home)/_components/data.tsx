@@ -1,5 +1,5 @@
 import { links } from "@/lib"
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import { Github, Linkedin } from "lucide-react"
 
 export const homePage = {
   title: "Hello, I'm Abdulrahman Saber",
@@ -13,8 +13,8 @@ export const homePage = {
   },
 
   introLinks: [
-    { icon: GitHubLogoIcon, title: "GitHub", href: links.github },
-    { icon: LinkedInLogoIcon, title: "Linkedin", href: links.linkedin }
+    { icon: Github, title: "GitHub", href: links.github },
+    { icon: Linkedin, title: "Linkedin", href: links.linkedin }
   ],
 
   services: [

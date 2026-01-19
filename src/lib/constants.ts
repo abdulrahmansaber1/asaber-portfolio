@@ -1,4 +1,13 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import { GithubIcon, LinkedinIcon } from "lucide-react"
+
+export const constants = {
+  siteName: "Abdulrahman Saber Portfolio",
+  languageCookieName: "asaber-language",
+  availableLanguages: ["en", "ar"],
+  defaultLanguage: "en",
+  themes: ["light", "dark"],
+  defaultTheme: "dark",
+}
 
 export const logo = {
   main: "/logo/logo.png",
@@ -10,33 +19,24 @@ export const contact = {
   phone: "+20 1123 5251 23",
   whatsapp: "https://wa.me/+201123525123",
   telegram: "https://t.me/asaber3030",
-  me: "/me.jpg",
+  me: "/me.jpeg",
 }
 
 export const links = {
   github: "https://github.com/asaber3030",
   linkedin: "https://www.linkedin.com/in/abdulrahman-saber/",
-  awsCertificate:
-    "https://www.credly.com/badges/5a83bedf-27b7-4ea1-b734-17fbc33c72ef/linked_in_profile",
+  awsCertificate: "https://www.credly.com/badges/5a83bedf-27b7-4ea1-b734-17fbc33c72ef/linked_in_profile",
 }
 
 export const metadata = {
   title: "Abdulrahman Saber - Portfolio",
-  description:
-    "Experienced Full Stack Developer with a demonstrated history of working in the computer software industry. Skilled in TypeScript, Next.js, React, PHP, Laravel, Node.js, Nest.js Express.js, MongoDB, and AWS",
-  keywords: [
-    "asaber3030",
-    "asaber",
-    "abdulrahman saber",
-    "abdulrahman-saber",
-    "abdo saber",
-    "saber abdulrahman",
-  ],
+  description: "Experienced Full Stack Developer with a demonstrated history of working in the computer software industry. Skilled in TypeScript, Next.js, React, PHP, Laravel, Node.js, Nest.js Express.js, MongoDB, and AWS",
+  keywords: ["asaber3030", "asaber", "abdulrahman saber", "abdulrahman-saber", "abdo saber", "saber abdulrahman"],
 }
 
 export const socialMedia = [
-  { icon: GitHubLogoIcon, href: links.github },
-  { icon: LinkedInLogoIcon, href: links.linkedin },
+  { icon: GithubIcon, href: links.github },
+  { icon: LinkedinIcon, href: links.linkedin },
 ]
 
 export const languageCookie = "asaber-language"

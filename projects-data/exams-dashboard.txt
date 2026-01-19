@@ -1,0 +1,30 @@
+Project Title:
+Exams Dashboard
+
+Short Description:
+A comprehensive web platform for managing, creating, and analyzing online exams, tailored for educational institutions and individual educators.
+
+Long Description:
+Exams Dashboard is a full-featured web application designed to streamline the process of exam management for both administrators and students. The platform enables users to create, organize, and distribute exams, manage subjects and folders, and analyze results with detailed reporting tools. With a modern, responsive interface, the dashboard supports user authentication, role-based access (admin and user), and multi-language support. The system integrates with cloud services for media management and leverages real-time technologies for instant updates and notifications. Built with scalability and usability in mind, Exams Dashboard empowers educators to efficiently handle all aspects of online assessments.
+
+Key Features:
+
+User authentication and role-based access (admin/user)
+Exam creation, editing, and organization by subjects and folders
+Real-time analytics and detailed exam reports
+Multi-language support (e.g., English, Arabic)
+Responsive and modern UI/UX
+Cloud media management (e.g., images, icons)
+Admin dashboard for managing users, exams, results, and settings
+Secure API endpoints and middleware for data protection
+Tech Stack:
+
+Next.js (React) for frontend and SSR
+TypeScript for type safety
+Prisma ORM for database management
+PostgreSQL (or compatible SQL database)
+Tailwind CSS & PostCSS for styling
+Cloudinary for media storage
+ESLint for code quality
+Docker for containerization
+RESTful APIs and WebSockets for real-time features

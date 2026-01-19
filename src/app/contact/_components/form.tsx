@@ -1,49 +1,49 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useContext, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useToast } from "@/hooks/use-toast"
 
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
-} from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { useLanguage } from "@/hooks/use-language"
-import { ContactFormSchema, cn } from "@/lib"
+import { useTranslations } from "next-intl"
+import { cn } from "@/lib"
 import { Loader } from "lucide-react"
 
 import emailjs from "@emailjs/browser"
-import translate from "@/lib/translate"
 import { motion } from "framer-motion"
+import z from "zod/v3"
 
 export const ContactForm = () => {
   const { toast } = useToast()
 
   const form = useForm({
-    resolver: zodResolver(ContactFormSchema),
+    resolver: zodResolver(
+      z.object({
+        name: z.string().min(2, "Name must be at least 2 characters long"),
+        subject: z.string().min(2, "Subject must be at least 2 characters long"),
+        email: z.string().email("Invalid email address"),
+        message: z.string().min(10, "Message must be at least 10 characters long"),
+      }),
+    ),
     defaultValues: {
       name: "",
       subject: "",
       email: "",
-      message: ""
-    }
+      message: "",
+    },
   })
   const ref = useRef<HTMLFormElement>(null)
-  const language = useLanguage()
+  const translate = useTranslations()
 
   const [loading, setLoading] = useState(false)
 
   const variants = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 }
+    animate: { opacity: 1, y: 0 },
   }
 
   const onSubmit = () => {
@@ -54,16 +54,16 @@ export const ContactForm = () => {
         () => {
           toast({
             title: "Message sent!",
-            description: "I'll get back to you as soon as possible."
+            description: "I'll get back to you as soon as possible.",
           })
         },
         () => {
           toast({
             title: "Message sent!",
             description: "I'll get back to you as soon as possible.",
-            variant: "destructive"
+            variant: "destructive",
           })
-        }
+        },
       )
       .finally(() => {
         setLoading(false)
@@ -74,18 +74,13 @@ export const ContactForm = () => {
     <section className="w-full">
       <Form {...form}>
         <form ref={ref} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={variants}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div initial="initial" animate="animate" variants={variants} transition={{ duration: 0.5 }}>
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{translate("name", language)}</FormLabel>
+                  <FormLabel>{translate("name")}</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -95,18 +90,13 @@ export const ContactForm = () => {
             />
           </motion.div>
 
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={variants}
-            transition={{ duration: 0.5, delay: 0.01 }}
-          >
+          <motion.div initial="initial" animate="animate" variants={variants} transition={{ duration: 0.5, delay: 0.01 }}>
             <FormField
               control={form.control}
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{translate("subject", language)}</FormLabel>
+                  <FormLabel>{translate("subject")}</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -116,18 +106,13 @@ export const ContactForm = () => {
             />
           </motion.div>
 
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={variants}
-            transition={{ duration: 0.5, delay: 0.05 }}
-          >
+          <motion.div initial="initial" animate="animate" variants={variants} transition={{ duration: 0.5, delay: 0.05 }}>
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{translate("email", language)}</FormLabel>
+                  <FormLabel>{translate("email")}</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -137,18 +122,13 @@ export const ContactForm = () => {
             />
           </motion.div>
 
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={variants}
-            transition={{ duration: 0.5, delay: 0.08 }}
-          >
+          <motion.div initial="initial" animate="animate" variants={variants} transition={{ duration: 0.5, delay: 0.08 }}>
             <FormField
               control={form.control}
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{translate("message", language)}</FormLabel>
+                  <FormLabel>{translate("message")}</FormLabel>
                   <FormControl>
                     <Textarea className="h-36 resize-none" {...field}></Textarea>
                   </FormControl>
@@ -158,22 +138,17 @@ export const ContactForm = () => {
             />
           </motion.div>
 
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={variants}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <motion.div initial="initial" animate="animate" variants={variants} transition={{ duration: 0.5, delay: 0.1 }}>
             <Button
               disabled={loading}
               type="submit"
               className={cn(
-                "w-full bg-indigo-900 hover:bg-indigo-800 flex gap-2",
-                loading && "opacity-70 cursor-not-allowed"
+                "w-full bg-primary text-primary-foreground hover:opacity-90 flex gap-2 h-12 rounded-xl font-bold text-base shadow-lg shadow-primary/20",
+                loading && "opacity-70 cursor-not-allowed",
               )}
             >
               {loading && <Loader className="size-4 animate-spin" />}
-              {translate("sendMessage", language)}
+              {translate("sendMessage")}
             </Button>
           </motion.div>
         </form>

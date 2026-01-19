@@ -1,21 +1,26 @@
-import translate from "@/lib/translate"
+"use client"
 
-import { useLanguage } from "@/hooks/use-language"
-
-import { useContext } from "react"
+import { useTranslations } from "next-intl"
+import { motion } from "framer-motion"
 
 export const HomeIntroHeaderSection = () => {
-  const language = useLanguage()
+  const translate = useTranslations()
 
   return (
-    <section className="space-y-2 text-center w-full">
-      <h1 className="xl:text-6xl md:text-4xl text-3xl font-bold mb-10">
-        {translate("helloIntro", language)}{" "}
-        <span className="home-h1-intro">{translate("homeIntroTitle", language)}</span>
-      </h1>
-      <p
-        className="xl:text-xl md:text-xl text-lg dark:text-gray-300 font-normal xl:max-w-[70%] md:max-w-[70%] w-full mx-auto"
-        dangerouslySetInnerHTML={{ __html: translate("homeIntroDescription", language) }}
+    <section className="space-y-6 text-center w-full py-10">
+      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, type: "spring" }}>
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black">
+          <span className="dark:text-white/60">{translate("helloIntro")}</span>
+          <span className="block text-primary">{translate("homeIntroTitle")}</span>
+        </h1>
+      </motion.div>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-lg md:text-2xl text-muted-foreground font-medium max-w-[800px] mx-auto leading-relaxed px-4"
+        dangerouslySetInnerHTML={{ __html: translate("homeIntroDescription") }}
       />
     </section>
   )

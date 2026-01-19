@@ -1,0 +1,39 @@
+Project Management System SaaS
+Short Description
+A full-stack, enterprise-grade SaaS platform for team collaboration and project management with real-time features, role-based access control, and multi-organization support.
+
+Description
+A comprehensive project management system built as a Software-as-a-Service platform that enables teams to collaborate efficiently. The system provides complete project lifecycle management with real-time communication, task tracking, and organizational workflows. Features include multi-tenant architecture supporting multiple organizations, subscription-based access, granular permission controls, and interactive Kanban boards. Built with modern technologies for scalability and performance.
+
+Key Features
+Multi-Organization Management - Support for multiple organizations with isolated workspaces and data segregation
+Project & Task Management - Complete CRUD operations for projects, project groups, and tasks with status tracking
+Kanban Boards - Interactive drag-and-drop boards for visual task management
+Real-time Chat - WebSocket-powered instant messaging and team communication
+Role-Based Access Control - Granular permissions system with custom roles and member management
+Team Collaboration - Member invitations, activity logs, and notification system
+Subscription Management - Multiple pricing plans with feature-based access control
+Activity Tracking - Comprehensive audit logs for all user actions and system events
+Responsive Dashboard - Modern, mobile-friendly interface with dark mode support
+Authentication & Authorization - Secure user registration, login, and session management
+Tech Stack
+Frontend:
+
+Next.js 14 (App Router)
+TypeScript
+React Query (TanStack Query)
+HeroUI Components
+Tailwind CSS
+Framer Motion
+Socket.io Client
+Axios
+Zod (Form Validation)
+Zustand (State Management)
+Backend:
+
+Node.js
+Express.js
+MongoDB
+MySQL
+Redis
+Socket.io
