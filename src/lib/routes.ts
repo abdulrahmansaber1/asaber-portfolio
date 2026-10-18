@@ -4,6 +4,7 @@ export const routes = {
   projects: "/projects",
   experience: "/experience",
   workTogether: "/contact",
+  contact: "/contact",
   cv: "/cv",
   backendProject: (slug: string) => `/projects/back-end/${slug}`,
   frontendProject: (slug: string) => `/projects/front-end/${slug}`,

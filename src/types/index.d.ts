@@ -7,6 +7,7 @@ export type TProject = {
   github?: string
   url?: string
   image?: string
+  images?: string[]
   description: string
   tools: string[]
   shortBrief?: string

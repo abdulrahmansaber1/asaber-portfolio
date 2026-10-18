@@ -1,52 +1,68 @@
 export const skills = [
-  { label: "TypeScript", logo: "/skills/typescript.svg" },
+  { label: "TypeScript", logo: "/skills/web/typescript.svg" },
   {
     label: "React.js",
-    logo: "/skills/react.svg"
+    logo: "/skills/web/react.svg"
   },
   {
     label: "Redux",
-    logo: "/skills/redux.svg"
+    logo: "/skills/web/redux.svg"
   },
   {
     label: "Next.js",
-    logo: "/skills/nextjs-icon.svg"
+    logo: "/skills/web/nextjs.svg"
   },
   {
     label: "Tailwind",
-    logo: "/skills/tailwindcss.svg"
+    logo: "/skills/web/tailwindcss.svg"
   },
   {
     label: "Sass",
-    logo: "/skills/sass.svg"
+    logo: "/skills/web/sass.svg"
   },
   {
     label: "Node.js",
-    logo: "/skills/nodejs-icon.svg"
+    logo: "/skills/web/nodejs.svg"
   },
   {
     label: "Nest.js",
-    logo: "/skills/nestjs.svg"
+    logo: "/skills/web/nestjs.svg"
   },
   {
     label: "PHP",
-    logo: "/skills/php.svg"
+    logo: "/skills/web/php.svg"
   },
   {
     label: "Laravel",
-    logo: "/skills/laravel-2.svg"
+    logo: "/skills/web/laravel.svg"
   },
   {
     label: "MySQL",
-    logo: "/skills/mysql.svg"
+    logo: "/skills/web/mysql.svg"
   },
   {
     label: "Docker",
-    logo: "/skills/docker.svg"
+    logo: "/skills/devops/docker.svg"
   },
   {
     label: "Kubernetes",
-    logo: "/skills/kubernetes.svg"
+    logo: "/skills/devops/kubernetes.svg"
+  },
+  {
+    label: "AWS",
+    logo: "/skills/devops/aws.svg"
+  },
+  {
+    label: "Linux",
+    logo: "/skills/devops/linux.svg"
+  },
+  {
+    label: "Terraform",
+    logo: "/skills/devops/terraform.svg"
+  },
+  {
+    label: "Nginx",
+    logo: "/skills/devops/nginx.svg"
   }
 ]
 
@@ -54,26 +70,30 @@ export const groupedSkills = [
   {
     group: "frontEndSkills",
     items: [
-      { label: "TypeScript", logo: "/skills/typescript.svg" },
+      { label: "TypeScript", logo: "/skills/web/typescript.svg" },
       {
         label: "Next.js",
-        logo: "/skills/nextjs.svg"
+        logo: "/skills/web/nextjs.svg"
+      },
+      {
+        label: "Tanstack Start",
+        logo: "/skills/web/tanstack.svg"
       },
       {
         label: "React.js",
-        logo: "/skills/react.svg"
+        logo: "/skills/web/react.svg"
       },
       {
         label: "Redux",
-        logo: "/skills/redux.svg"
+        logo: "/skills/web/redux.svg"
       },
       {
         label: "TailwindCSS",
-        logo: "/skills/tailwindcss.svg"
+        logo: "/skills/web/tailwindcss.svg"
       },
       {
         label: "Sass",
-        logo: "/skills/sass.svg"
+        logo: "/skills/web/sass.svg"
       }
     ]
   },
@@ -81,59 +101,98 @@ export const groupedSkills = [
     group: "backEndSkills",
     items: [
       {
-        label: "Node.js",
-        logo: "/skills/nodejs.svg"
+        label: "NodeJS",
+        logo: "/skills/web/nodejs.svg"
       },
       {
-        label: "Nest.js",
-        logo: "/skills/nestjs.svg"
+        label: "BunJS",
+        logo: "/skills/web/bun.svg"
+      },
+      {
+        label: "Hono",
+        logo: "/skills/web/hono.svg"
+      },
+      {
+        label: "ExpressJS",
+        logo: "/skills/web/expressjs.svg"
+      },
+      {
+        label: "NestJS",
+        logo: "/skills/web/nestjs.svg"
       },
       {
         label: "PHP",
-        logo: "/skills/php.svg"
+        logo: "/skills/web/php.svg"
       },
       {
         label: "Laravel",
-        logo: "/skills/laravel.svg"
+        logo: "/skills/web/laravel.svg"
       },
       {
         label: "Python",
-        logo: "/skills/python.svg"
+        logo: "/skills/web/python.svg"
+      },
+      {
+        label: "Flask",
+        logo: "/skills/web/flask.svg"
       },
       {
         label: "MySQL",
-        logo: "/skills/mysql.svg"
-      },
-      {
-        label: "Docker",
-        logo: "/skills/docker.svg"
-      },
-      {
-        label: "Kubernetes",
-        logo: "/skills/kubernetes.svg"
-      }
-    ]
-  },
-  {
-    group: "databaseSkills",
-    items: [
-      {
-        label: "MySQL",
-        logo: "/skills/mysql.svg"
+        logo: "/skills/web/mysql.svg"
       },
       {
         label: "PostgreSQL",
-        logo: "/skills/postgresql.svg"
+        logo: "/skills/web/postgresql.svg"
       },
       {
         label: "MongoDB",
-        logo: "/skills/mongo.svg"
+        logo: "/skills/web/mongodb.svg"
       },
-
       {
         label: "Redis",
-        logo: "/skills/redis.svg"
-      }
+        logo: "/skills/web/redis.svg"
+      },
+    ]
+  },
+  {
+    group: "devopsSkills",
+    items: [
+      {
+        label: "Docker",
+        logo: "/skills/devops/docker.svg"
+      },
+      {
+        label: "Kubernetes",
+        logo: "/skills/devops/kubernetes.svg"
+      },
+      {
+        label: "AWS",
+        logo: "/skills/devops/aws.svg"
+      },
+      {
+        label: "Ansible",
+        logo: "/skills/devops/ansible.svg"
+      },
+      {
+        label: "Grafana",
+        logo: "/skills/devops/grafana.svg"
+      },
+      {
+        label: "Prometheus",
+        logo: "/skills/devops/prometheus.svg"
+      },
+      {
+        label: "HashiCorp Vault",
+        logo: "/skills/devops/hashicorp-vault.svg"
+      },
+      {
+        label: "Terraform",
+        logo: "/skills/devops/terraform.svg"
+      },
+      {
+        label: "ArgoCD",
+        logo: "/skills/devops/argocd.svg"
+      },
     ]
   },
   {
@@ -141,13 +200,13 @@ export const groupedSkills = [
     items: [
       {
         label: "Python",
-        logo: "/skills/python.svg"
+        logo: "/skills/web/python.svg"
       },
-      { label: "Matplotlib", logo: "/skills/matplotlib.svg" },
-      { label: "Pandas", logo: "/skills/pandas.png" },
+      { label: "Matplotlib", logo: "/skills/ai/matplotlib.svg" },
+      { label: "Pandas", logo: "/skills/ai/pandas.svg" },
       {
         label: "Scikit-Learn",
-        logo: "/skills/scikit.png"
+        logo: "/skills/ai/scikitlearn.svg"
       }
     ]
   }

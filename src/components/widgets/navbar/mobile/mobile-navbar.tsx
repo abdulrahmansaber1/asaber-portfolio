@@ -29,7 +29,7 @@ export const MobileNavbar = () => {
   }
 
   return (
-    <div className="sticky top-0 z-50 flex items-center justify-between p-4 border-b border-primary/10 dark:border-white/10 bg-background/80 dark:bg-background/60 backdrop-blur-xl md:hidden">
+    <div className="sticky top-0 z-50 flex items-center justify-between p-4 border-b border-primary/10 dark:border-white/10 bg-background/80 dark:bg-background/60 backdrop-blur-xl lg:hidden">
       <Logo />
 
       <Sheet open={open} onOpenChange={setOpen}>
@@ -119,21 +119,17 @@ export const MobileNavbar = () => {
             <div className="space-y-2">
               <LanguageSwitcher
                 label={translate("switchLanguage")}
-                className="w-full justify-start px-4 py-3 rounded-lg font-bold text-muted-foreground hover:text-primary hover:bg-primary/10"
+                className="w-full justify-start px-4 py-3 rounded-lg font-bold text-muted-foreground hover:bg-primary/10"
                 variant="ghost"
               />
               <ThemeSwitcher
                 label={translate("switchTheme")}
-                className="w-full justify-start px-4 py-3 rounded-lg font-bold text-muted-foreground hover:text-primary hover:bg-primary/10"
+                className="w-full justify-start px-4 py-3 rounded-lg font-bold text-muted-foreground hover:bg-primary/90"
                 variant="ghost"
               />
             </div>
 
-            <Separator className="bg-primary/10" />
 
-            <Link href={routes.workTogether} onClick={handleClose} className="block w-full pt-4">
-              <RetroButton className="w-full font-bold rounded-lg">{translate("workTogetherButton")}</RetroButton>
-            </Link>
           </nav>
         </SheetContent>
       </Sheet>

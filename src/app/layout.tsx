@@ -12,6 +12,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { Analytics } from "@vercel/analytics/react"
 import { NextIntlClientProvider } from "next-intl"
 import { BackgroundGradient } from "@/components/widgets/common/background-gradient"
+import { CursorEffect } from "@/components/widgets/common/cursor-effect"
 
 export const metadata: Metadata = defaultMetadataCookie
 
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <NextIntlClientProvider>
           <ThemeProvider attribute="class" defaultTheme="dark" themes={["light", "dark"]} enableSystem={true}>
             <BackgroundGradient />
+            <CursorEffect />
 
             <Navbar />
             <MobileNavbar />

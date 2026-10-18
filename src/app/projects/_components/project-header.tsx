@@ -1,8 +1,7 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { routes } from "@/lib"
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Dispatch, SetStateAction } from "react"
@@ -10,6 +9,8 @@ import { Github, LinkIcon, MoreHorizontal, Terminal, Info, Layers } from "lucide
 import { TProject } from "@/types"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { getProjectDescription, getProjectFeatures } from "./translations"
+import { ProjectMediaCarousel } from "./project-carousel"
 
 type Props = {
   project: TProject
@@ -21,14 +22,23 @@ type Props = {
 
 export const ProjectHeader = ({ project, image, sheetOpen, setSheetOpen }: Props) => {
   const translate = useTranslations()
+  const locale = useLocale()
+  const keyFeatures = getProjectFeatures(project.keyFeatures, locale)
+  const images = project.images && project.images.length > 0
+    ? project.images
+    : [project.gif, image].filter(Boolean) as string[]
 
   return (
     <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
       <SheetContent className="w-full sm:max-w-[600px] p-0 border-l border-white/10 bg-background/95 backdrop-blur-xl">
         <ScrollArea className="h-full">
-          <div className="relative h-64 w-full overflow-hidden">
-            <Image src={project.gif ? project.gif : image} alt={project.title} fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          <div className="relative w-full overflow-hidden">
+            <ProjectMediaCarousel
+              images={images}
+              title={project.title}
+              aspectRatioClassName="aspect-video"
+              className="rounded-none border-x-0 border-t-0 border-b border-white/10 shadow-none"
+            />
           </div>
 
           <div className="p-8 space-y-8">
@@ -47,7 +57,7 @@ export const ProjectHeader = ({ project, image, sheetOpen, setSheetOpen }: Props
                   <Info className="size-5" />
                   <h3 className="font-bold uppercase tracking-wider text-sm">{translate("projectDescription")}</h3>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                <p className="text-muted-foreground leading-relaxed">{getProjectDescription(project, locale)}</p>
               </section>
 
               <section className="space-y-3">
@@ -64,14 +74,14 @@ export const ProjectHeader = ({ project, image, sheetOpen, setSheetOpen }: Props
                 </div>
               </section>
 
-              {project.keyFeatures && (
+              {keyFeatures && (
                 <section className="space-y-3">
                   <div className="flex items-center gap-2 text-primary">
                     <Layers className="size-5" />
                     <h3 className="font-bold uppercase tracking-wider text-sm">{translate("features")}</h3>
                   </div>
                   <ul className="grid gap-2">
-                    {project.keyFeatures.map((feature, index) => (
+                    {keyFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <div className="size-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
                         {feature}

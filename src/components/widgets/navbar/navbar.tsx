@@ -21,7 +21,7 @@ export const Navbar = () => {
     <motion.div
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-4 z-50 flex items-center justify-between gap-4 py-2 px-2 mx-auto max-w-screen-2xl rounded-full border border-primary/10 dark:border-white/10 bg-background/80 dark:bg-background/60 backdrop-blur-xl shadow-2xl hidden md:flex"
+      className="sticky top-4 z-50 md:mx-6 xl:mx-auto                      flex items-center justify-between gap-4 py-2 px-2 mx-auto max-w-screen-2xl rounded-full border border-primary/10 dark:border-white/10 bg-background/80 dark:bg-background/60 backdrop-blur-xl shadow-2xl hidden lg:flex"
     >
       {/* Left Section: Nav Links */}
       <section className="flex-1 flex items-center justify-start">

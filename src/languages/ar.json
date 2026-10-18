@@ -10,10 +10,9 @@
   "cv": "السيرة الذاتية",
   "workTogetherButton": "تواصل معي!",
   "contact": "للتواصل",
-
   "switchLanguage": "تغيير اللغة",
   "switchTheme": "تغيير الثيم",
-
+  "devopsSkills": "الديڤ أوبس",
   "contactPageTitle": "دعنا نتحدث. أخبرني عن مشروعك.",
   "contactPageSecondaryTitle": "سأعود إليك في أقرب وقت ممكن.",
   "message": "رسالة",
@@ -25,59 +24,49 @@
   "features": "المميزات",
   "urls": "الروابط",
   "latestProjects": "اخر المشاريع",
-
   "moreDetails": "المزيد من التفاصيل",
   "quickPreview": "نظرة سريعة",
   "preview": "مشاهدة",
   "github": "Github",
   "url": "الرابط",
   "goBack": "العودة",
-
   "name": "الاسم",
   "subject": "الموضوع",
   "email": "البريد الإلكتروني",
   "sendMessage": "إرسال الرسالة",
-
   "helloIntro": "مرحبًا، أنا ",
   "homeIntroTitle": "عبدالرحمن صابر",
-  "homeIntroDescription": "مطور ويب ذو خبرة بدأت هذه الرحلة منذ 9 سنوات. تعلمت العديد من تقنيات وإطارات العمل على الويب، وبناء تطبيقات ويب قابلة للتوسع وذات أداء عالي.",
+  "homeIntroDescription": "مهندس تطوير برمجيات شامل وبنية تحتية (Full-Stack & DevOps Engineer) متخصص في تصميم وبناء ونشر تطبيقات الويب عالية الأداء والقابلة للتوسع، وإدارة البنية التحتية السحابية. أمتلك خبرة متقدمة في أطر عمل الويب الحديثة، والحاويات البرمجية (Containerization)، وأنابيب التكامل والنشر المستمر (CI/CD Pipelines)، والأنظمة الخلفية القوية، مع التركيز التام على الأتمتة والموثوقية الشاملة للأنظمة.",
   "myLastProject": "آخر مشروع لي",
-
   "mySkills": "مهاراتي",
+  "techStack": "التقنيات",
+  "devops": "الديڤ أوبس",
   "skills": "المهارات",
   "moreAboutMe": "المزيد عني",
-
   "myServices": "خدماتي",
-
   "aboutMe": "عن عبدالرحمن صابر",
-  "aboutMeDescription": "مطور ويب ذو خبرة بدأت هذه الرحلة منذ 9 سنوات. ماهر في العديد من الإطارات واللغات بما في ذلك Laravel و PHP و React و NextJS بشغف للتقنيات الجديدة. لقد أكملت بنجاح العديد من المشاريع التي تظهر خبرتي.",
+  "aboutMeDescription": "مهندس تطوير برمجيات شامل وبنية تحتية (Full-Stack & DevOps Engineer) متخصص في تصميم وبناء ونشر تطبيقات الويب عالية الأداء والقابلة للتوسع، وإدارة البنية التحتية السحابية. أمتلك خبرة متقدمة في أطر عمل الويب الحديثة، والحاويات البرمجية (Containerization)، وأنابيب التكامل والنشر المستمر (CI/CD Pipelines)، والأنظمة الخلفية القوية، مع التركيز التام على الأتمتة والموثوقية الشاملة للأنظمة.",
   "education": "التعليم",
   "zagizagUniversity": "جامعة الزقازيق",
   "zagizagUniversityDate": "2020 - 2025",
   "zagizagUniversityMajor": "بكالوريوس في هندسة الإلكترونيات والاتصالات",
-
   "lastAchievement": "آخر إنجاز",
   "viewCredentials": "عرض الشهادة",
-
   "issuedAt": "صدرت في",
   "issudeDate": "17 سبتمبر 2024",
-
   "all": "الكل",
   "others": "أخرى",
   "ai": "الذكاء الاصطناعي",
   "backEnd": "مشاريع الباك اند",
   "frontEnd": "مشاريع الفرو نت اند",
-
   "aiSkills": "الذكاء الاصطناعي",
   "backEndSkills": "الباك اند",
   "frontEndSkills": "الفرونت اند",
   "databaseSkills": "قواعد البيانات",
-
   "othersProjects": "مشاريع أخرى",
   "backEndProjects": "مشاريع الباك اند",
   "frontEndProjects": "مشاريع الفرونت اند",
   "aiProjects": "مشاريع الذكاء الاصطناعي",
-
   "projectName": "اسم المشروع",
   "projectDescription": "وصف المشروع",
   "projectTools": "الأدوات",

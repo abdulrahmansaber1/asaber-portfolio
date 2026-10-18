@@ -16,7 +16,8 @@
   "contactPagePara1": "Would you like me to respond immediately, Send me",
   "whatsapp": "Whatsapp",
   "telegram": "Telegram",
-
+  "devopsSkills": "DevOps Skills",
+  "devops": "DevOps",
   "viewDetails": "View Details",
   "moreDetails": "More Details",
   "quickPreview": "Quick Preview",
@@ -32,50 +33,40 @@
   "sendMessage": "Send Message",
   "urls": "URLs",
   "latestProjects": "Latest Projects",
-
   "helloIntro": "Hello, I'm ",
   "homeIntroTitle": "Abdulrahman Saber",
-  "homeIntroDescription": "An Experienced Full Stack Web Developer who embarked this journey 9 years ago. Learning many web technologies and frameworks, and building scalable web applications with high performance.",
-
+  "homeIntroDescription": "Full-Stack & DevOps Engineer specializing in designing, building, and deploying scalable, high-performance web applications and cloud infrastructure. Proficient across modern web frameworks, containerization, CI/CD pipelines, and robust backend architectures with a strong focus on end-to-end reliability and automation.",
   "myLastProject": "My Last Project",
-
   "mySkills": "My Skills",
+  "techStack": "Tech Stack",
   "skills": "Skills",
   "moreAboutMe": "More About Me",
-
   "switchLanguage": "Switch Language",
   "switchTheme": "Switch Theme",
-
   "myServices": "My Services",
-
   "aboutMe": "About Me",
-  "aboutMeDescription": "An experienced Full-Stack Web Developer who embarked on this journey 9 years ago. Proficient in various frameworks and languages including Laravel, PHP, React, and NextJS with passion for new technologies. I have successfully completed numerous projects demonstrating my expertise.",
+  "aboutMeDescription": "Full-Stack & DevOps Engineer specializing in designing, building, and deploying scalable, high-performance web applications and cloud infrastructure. Proficient across modern web frameworks, containerization, CI/CD pipelines, and robust backend architectures with a strong focus on end-to-end reliability and automation.",
   "education": "Education",
-  "zagizagUniversity": "Zagizag University",
+  "zagizagUniversity": "Zagazig University",
   "zagizagUniversityDate": "2020 - 2025",
   "zagizagUniversityMajor": "B.Sc in Electronics and Communications Engineering",
-
   "lastAchievement": "Last Achievement",
   "viewCredentials": "View credentials",
   "issuedAt": "Issued at",
   "issudeDate": "September 17, 2024",
-
   "all": "All",
   "others": "Others",
   "ai": "AI",
   "backEnd": "Back-End",
   "frontEnd": "Front-End",
-
   "aiSkills": "AI",
   "backEndSkills": "Back-End",
   "frontEndSkills": "Front-End",
   "databaseSkills": "Databases",
-
   "othersProjects": "Other Projects",
   "backEndProjects": "Back-End Projects",
   "frontEndProjects": "Front-End Projects",
   "aiProjects": "AI Projects",
-
   "projectName": "Project Name",
   "projectDescription": "Project Description",
   "projectTools": "Tools",

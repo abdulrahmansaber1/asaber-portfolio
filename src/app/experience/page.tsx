@@ -1,15 +1,33 @@
 import { experiences } from "./_components/data"
 import { ExperienceIntroSection } from "./_components/intro"
-import VerticalTimeline01 from "@/components/widgets/animated-widgets/timeline"
+import { ExperienceStats } from "./_components/stats"
+import { ExperienceTimeline } from "./_components/experience-timeline"
+import { ExperienceSkillsSnapshot } from "./_components/skills-snapshot"
+import { ExperienceHighlights } from "./_components/highlights"
 
 export default function ExperiencePage() {
   return (
-    <div className="relative pt-12 pb-20 space-y-16">
-      <ExperienceIntroSection />
-      <div className="relative">
-        <VerticalTimeline01 items={experiences} />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-primary/50 via-primary/20 to-transparent -z-10 hidden md:block" />
+    <div className="relative pt-12 pb-24 space-y-20">
+      {/* Ambient background glow */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-1/4 -left-32 size-96 bg-primary/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/3 -right-32 size-96 bg-violet-500/4 rounded-full blur-[120px]" />
       </div>
+
+      {/* Hero intro */}
+      <ExperienceIntroSection />
+
+      {/* Stats row */}
+      <ExperienceStats />
+
+      {/* Work experience timeline */}
+      <ExperienceTimeline items={experiences} />
+
+      {/* Highlights & achievements */}
+      <ExperienceHighlights />
+
+      {/* Tech skills snapshot */}
+      <ExperienceSkillsSnapshot />
     </div>
   )
 }
